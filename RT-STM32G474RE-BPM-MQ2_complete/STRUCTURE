@@ -1,0 +1,132 @@
+RT-STM32G474RE-BPM-MQ2_separated3
+===================================
+ChibiOS RTOS - STM32G474RE Nucleo
+
+Struttura progetto
+==================
+
+.
+├── App/                        Applicazione
+│   ├── src/                    Sorgenti applicazione
+│   │   ├── main.c                Inizializzazione + creazione thread
+│   │   ├── thread_bpm.c          Thread frequenza cardiaca (I2C)
+│   │   └── thread_mq.c           Thread gas sensor + buzzer (ADC/PWM)
+│   │
+│   ├── include/                Header applicazione
+│   │   ├── thread_bpm.h          Header thread BPM (registri MAX30102)
+│   │   └── thread_mq.h           Header thread MQ-2 (defines ADC/Buzzer)
+│   │
+│   └── config/                 Configurazioni ChibiOS
+│       ├── chconf.h              Configurazione kernel RTOS
+│       ├── halconf.h             Configurazione driver HAL
+│       └── mcuconf.h             Configurazione periferiche MCU
+│
+├── Libs/                       Librerie esterne
+│   └── ssd1306/                Driver display OLED I2C
+│       ├── ssd1306.c             Driver SSD1306 128x64
+│       ├── ssd1306.h             Header driver
+│       ├── ssd1306_font.c        Font 11x18
+│       ├── ssd1306_font_7_10.c   Font 7x10
+│       └── ssd1306.mk           Regole build
+│
+├── Makefile                    Build system
+├── STRUCTURE                   Questo file
+│
+├── .cproject                   Configurazione Eclipse CDT
+├── .project                    Configurazione Eclipse
+└── .settings/                  Impostazioni Eclipse
+
+Dipendenze
+==========
+
+App/src/main.c
+  ├── App/include/thread_bpm.h  (extern chp, serial_mtx, i2ccfg, wa_thread_bpm)
+  └── App/include/thread_mq.h   (extern chp, serial_mtx, wa_thread_mq2)
+
+App/src/thread_bpm.c
+  └── App/include/thread_bpm.h
+
+App/src/thread_mq.c
+  └── App/include/thread_mq.h
+
+Variabili condivise (definite in main.c)
+=========================================
+
+  BaseSequentialStream *chp     - Stream seriale USART2
+  mutex_t serial_mtx            - Mutex per accesso seriale
+
+Periferiche utilizzate
+======================
+
+  I2C1   (PB8/PB9)  → MAX30102 pulse oximeter
+  ADC1   (PA0)      → MQ-2 gas sensor
+  TIM3   (PB4)      → Buzzer passivo (PWM 2.5kHz)
+  USART2 (PA2/PA3)  → Comunicazione seriale (38400 baud)
+
+Thread
+======
+
+  thread_bpm (priorita NORMALPRIO+1)
+    - Campionamento MAX30102 ogni 15ms via I2C
+    - Filtri: rimozione DC, passa-basso, peak detection
+    - Media mobile su 8 battiti
+    - Emergenza: battito basso (<40) o alto (>120)
+
+  thread_mq (priorita NORMALPRIO)
+    - Lettura ADC MQ-2 ogni 1 secondo
+    - Buzzer attivato se ADC >700 o <150
+    - Messaggi emergenza su seriale
+
+Aggiungere un nuovo modulo
+==========================
+
+1. Creare App/include/thread_nuovo.h
+     #include "ch.h"
+     #include "hal.h"
+     extern BaseSequentialStream *chp;
+     extern mutex_t serial_mtx;
+     extern THD_WORKING_AREA(wa_thread_nuovo, <stack_size>);
+     THD_FUNCTION(thread_nuovo, arg);
+
+2. Creare App/src/thread_nuovo.c
+     #include "thread_nuovo.h"
+     #include "chprintf.h"
+
+     THD_WORKING_AREA(wa_thread_nuovo, <stack_size>);
+
+     THD_FUNCTION(thread_nuovo, arg) {
+       ...
+     }
+
+3. Aggiornare Makefile
+     CSRC = $(ALLCSRC) \
+            $(TESTSRC) \
+            App/src/main.c \
+            App/src/thread_bpm.c \
+            App/src/thread_mq.c \
+            App/src/thread_nuovo.c
+
+4. Aggiornare App/src/main.c
+     #include "thread_nuovo.h"
+
+     In main(), dopo init periferiche:
+       chThdCreateStatic(wa_thread_nuovo, sizeof(wa_thread_nuovo),
+                         NORMALPRIO, thread_nuovo, NULL);
+
+Aggiungere una nuova libreria
+=============================
+
+1. Creare Libs/nomelibreria/
+     ├── nomelibreria.c
+     ├── nomelibreria.h
+     └── nomelibreria.mk
+
+2. Creare Libs/nomelibreria/nomelibreria.mk
+     LIBPATH = ./Libs/nomelibreria
+     LIBSRC = $(LIBPATH)/nomelibreria.c
+     LIBINC = $(LIBPATH)
+     ALLCSRC += $(LIBSRC)
+     ALLINC  += $(LIBINC)
+
+3. Aggiornare Makefile
+     include ./Libs/nomelibreria/nomelibreria.mk
