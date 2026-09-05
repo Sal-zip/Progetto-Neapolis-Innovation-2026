@@ -1,0 +1,3409 @@
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"hal_st.c"
+  14              		.file 1 "c:\\chibistudio\\tools\\gnu tools arm embedded\\10.3 2021.10\\arm-none-eabi\\include\\mac
+  15              		.file 2 "c:\\chibistudio\\tools\\gnu tools arm embedded\\10.3 2021.10\\arm-none-eabi\\include\\sys
+  16              		.file 3 "../../chibios2111/os/rt/include/chtime.h"
+  17              		.file 4 "../../chibios2111/os/hal/ports/STM32/LLD/TIMv1/stm32_tim.h"
+  18              		.file 5 "../../chibios2111/os/hal/src/hal_st.c"
+  19              		.file 6 "../../chibios2111/os/hal/ports/STM32/LLD/SYSTICKv1/hal_st_lld.h"
+  20              		.section	.gnu.debuglto_.debug_info,"e",%progbits
+  21              	.Ldebug_info0:
+  22              		.hidden	hal_st.c.6314a11c
+  23              		.weak	hal_st.c.6314a11c
+  24              	hal_st.c.6314a11c:
+  25 0000 7D030000 		.4byte	0x37d
+  26 0004 0400     		.2byte	0x4
+  27 0006 00000000 		.4byte	.Ldebug_abbrev0
+  28 000a 04       		.byte	0x4
+  29 000b 01       		.uleb128 0x1
+  30 000c 32020000 		.4byte	.LASF41
+  31 0010 0C       		.byte	0xc
+  32 0011 7D010000 		.4byte	.LASF42
+  33 0015 C2000000 		.4byte	.LASF43
+  34 0019 00000000 		.4byte	.Ldebug_line0
+  35 001d 02       		.uleb128 0x2
+  36 001e 04       		.byte	0x4
+  37 001f 05       		.byte	0x5
+  38 0020 696E7400 		.ascii	"int\000"
+  39 0024 03       		.uleb128 0x3
+  40 0025 04       		.byte	0x4
+  41 0026 07       		.byte	0x7
+  42 0027 3E010000 		.4byte	.LASF0
+  43 002b 03       		.uleb128 0x3
+  44 002c 08       		.byte	0x8
+  45 002d 05       		.byte	0x5
+  46 002e 6F010000 		.4byte	.LASF1
+  47 0032 03       		.uleb128 0x3
+  48 0033 08       		.byte	0x8
+  49 0034 04       		.byte	0x4
+  50 0035 ED010000 		.4byte	.LASF2
+  51 0039 03       		.uleb128 0x3
+  52 003a 01       		.byte	0x1
+  53 003b 06       		.byte	0x6
+  54 003c 04020000 		.4byte	.LASF3
+  55 0040 03       		.uleb128 0x3
+  56 0041 01       		.byte	0x1
+  57 0042 08       		.byte	0x8
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 2
+
+
+  58 0043 01010000 		.4byte	.LASF4
+  59 0047 03       		.uleb128 0x3
+  60 0048 02       		.byte	0x2
+  61 0049 05       		.byte	0x5
+  62 004a 3F000000 		.4byte	.LASF5
+  63 004e 03       		.uleb128 0x3
+  64 004f 02       		.byte	0x2
+  65 0050 07       		.byte	0x7
+  66 0051 2C000000 		.4byte	.LASF6
+  67 0055 03       		.uleb128 0x3
+  68 0056 04       		.byte	0x4
+  69 0057 05       		.byte	0x5
+  70 0058 D9010000 		.4byte	.LASF7
+  71 005c 04       		.uleb128 0x4
+  72 005d 0F010000 		.4byte	.LASF10
+  73 0061 01       		.byte	0x1
+  74 0062 4F       		.byte	0x4f
+  75 0063 19       		.byte	0x19
+  76 0064 68000000 		.4byte	0x68
+  77 0068 03       		.uleb128 0x3
+  78 0069 04       		.byte	0x4
+  79 006a 07       		.byte	0x7
+  80 006b EF000000 		.4byte	.LASF8
+  81 006f 03       		.uleb128 0x3
+  82 0070 08       		.byte	0x8
+  83 0071 07       		.byte	0x7
+  84 0072 16020000 		.4byte	.LASF9
+  85 0076 04       		.uleb128 0x4
+  86 0077 D0010000 		.4byte	.LASF11
+  87 007b 02       		.byte	0x2
+  88 007c 30       		.byte	0x30
+  89 007d 14       		.byte	0x14
+  90 007e 5C000000 		.4byte	0x5c
+  91 0082 05       		.uleb128 0x5
+  92 0083 76000000 		.4byte	0x76
+  93 0087 03       		.uleb128 0x3
+  94 0088 01       		.byte	0x1
+  95 0089 08       		.byte	0x8
+  96 008a 4B010000 		.4byte	.LASF12
+  97 008e 06       		.uleb128 0x6
+  98 008f 87000000 		.4byte	0x87
+  99 0093 04       		.uleb128 0x4
+ 100 0094 22000000 		.4byte	.LASF13
+ 101 0098 03       		.byte	0x3
+ 102 0099 6D       		.byte	0x6d
+ 103 009a 12       		.byte	0x12
+ 104 009b 76000000 		.4byte	0x76
+ 105 009f 07       		.uleb128 0x7
+ 106 00a0 82000000 		.4byte	0x82
+ 107 00a4 AF000000 		.4byte	0xaf
+ 108 00a8 08       		.uleb128 0x8
+ 109 00a9 24000000 		.4byte	0x24
+ 110 00ad 01       		.byte	0x1
+ 111 00ae 00       		.byte	0
+ 112 00af 05       		.uleb128 0x5
+ 113 00b0 9F000000 		.4byte	0x9f
+ 114 00b4 07       		.uleb128 0x7
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 3
+
+
+ 115 00b5 82000000 		.4byte	0x82
+ 116 00b9 C4000000 		.4byte	0xc4
+ 117 00bd 08       		.uleb128 0x8
+ 118 00be 24000000 		.4byte	0x24
+ 119 00c2 03       		.byte	0x3
+ 120 00c3 00       		.byte	0
+ 121 00c4 05       		.uleb128 0x5
+ 122 00c5 B4000000 		.4byte	0xb4
+ 123 00c9 03       		.uleb128 0x3
+ 124 00ca 01       		.byte	0x1
+ 125 00cb 02       		.byte	0x2
+ 126 00cc 10020000 		.4byte	.LASF14
+ 127 00d0 09       		.uleb128 0x9
+ 128 00d1 E403     		.2byte	0x3e4
+ 129 00d3 04       		.byte	0x4
+ 130 00d4 F601     		.2byte	0x1f6
+ 131 00d6 09       		.byte	0x9
+ 132 00d7 48020000 		.4byte	0x248
+ 133 00db 0A       		.uleb128 0xa
+ 134 00dc 43523100 		.ascii	"CR1\000"
+ 135 00e0 04       		.byte	0x4
+ 136 00e1 F701     		.2byte	0x1f7
+ 137 00e3 19       		.byte	0x19
+ 138 00e4 82000000 		.4byte	0x82
+ 139 00e8 00       		.byte	0
+ 140 00e9 0A       		.uleb128 0xa
+ 141 00ea 43523200 		.ascii	"CR2\000"
+ 142 00ee 04       		.byte	0x4
+ 143 00ef F801     		.2byte	0x1f8
+ 144 00f1 19       		.byte	0x19
+ 145 00f2 82000000 		.4byte	0x82
+ 146 00f6 04       		.byte	0x4
+ 147 00f7 0B       		.uleb128 0xb
+ 148 00f8 B9010000 		.4byte	.LASF15
+ 149 00fc 04       		.byte	0x4
+ 150 00fd F901     		.2byte	0x1f9
+ 151 00ff 19       		.byte	0x19
+ 152 0100 82000000 		.4byte	0x82
+ 153 0104 08       		.byte	0x8
+ 154 0105 0B       		.uleb128 0xb
+ 155 0106 88000000 		.4byte	.LASF16
+ 156 010a 04       		.byte	0x4
+ 157 010b FA01     		.2byte	0x1fa
+ 158 010d 19       		.byte	0x19
+ 159 010e 82000000 		.4byte	0x82
+ 160 0112 0C       		.byte	0xc
+ 161 0113 0A       		.uleb128 0xa
+ 162 0114 535200   		.ascii	"SR\000"
+ 163 0117 04       		.byte	0x4
+ 164 0118 FB01     		.2byte	0x1fb
+ 165 011a 19       		.byte	0x19
+ 166 011b 82000000 		.4byte	0x82
+ 167 011f 10       		.byte	0x10
+ 168 0120 0A       		.uleb128 0xa
+ 169 0121 45475200 		.ascii	"EGR\000"
+ 170 0125 04       		.byte	0x4
+ 171 0126 FC01     		.2byte	0x1fc
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 4
+
+
+ 172 0128 19       		.byte	0x19
+ 173 0129 82000000 		.4byte	0x82
+ 174 012d 14       		.byte	0x14
+ 175 012e 0B       		.uleb128 0xb
+ 176 012f BE010000 		.4byte	.LASF17
+ 177 0133 04       		.byte	0x4
+ 178 0134 FD01     		.2byte	0x1fd
+ 179 0136 19       		.byte	0x19
+ 180 0137 82000000 		.4byte	0x82
+ 181 013b 18       		.byte	0x18
+ 182 013c 0B       		.uleb128 0xb
+ 183 013d C4010000 		.4byte	.LASF18
+ 184 0141 04       		.byte	0x4
+ 185 0142 FE01     		.2byte	0x1fe
+ 186 0144 19       		.byte	0x19
+ 187 0145 82000000 		.4byte	0x82
+ 188 0149 1C       		.byte	0x1c
+ 189 014a 0B       		.uleb128 0xb
+ 190 014b B4010000 		.4byte	.LASF19
+ 191 014f 04       		.byte	0x4
+ 192 0150 FF01     		.2byte	0x1ff
+ 193 0152 19       		.byte	0x19
+ 194 0153 82000000 		.4byte	0x82
+ 195 0157 20       		.byte	0x20
+ 196 0158 0A       		.uleb128 0xa
+ 197 0159 434E5400 		.ascii	"CNT\000"
+ 198 015d 04       		.byte	0x4
+ 199 015e 0002     		.2byte	0x200
+ 200 0160 19       		.byte	0x19
+ 201 0161 82000000 		.4byte	0x82
+ 202 0165 24       		.byte	0x24
+ 203 0166 0A       		.uleb128 0xa
+ 204 0167 50534300 		.ascii	"PSC\000"
+ 205 016b 04       		.byte	0x4
+ 206 016c 0102     		.2byte	0x201
+ 207 016e 19       		.byte	0x19
+ 208 016f 82000000 		.4byte	0x82
+ 209 0173 28       		.byte	0x28
+ 210 0174 0A       		.uleb128 0xa
+ 211 0175 41525200 		.ascii	"ARR\000"
+ 212 0179 04       		.byte	0x4
+ 213 017a 0202     		.2byte	0x202
+ 214 017c 19       		.byte	0x19
+ 215 017d 82000000 		.4byte	0x82
+ 216 0181 2C       		.byte	0x2c
+ 217 0182 0A       		.uleb128 0xa
+ 218 0183 52435200 		.ascii	"RCR\000"
+ 219 0187 04       		.byte	0x4
+ 220 0188 0302     		.2byte	0x203
+ 221 018a 19       		.byte	0x19
+ 222 018b 82000000 		.4byte	0x82
+ 223 018f 30       		.byte	0x30
+ 224 0190 0A       		.uleb128 0xa
+ 225 0191 43435200 		.ascii	"CCR\000"
+ 226 0195 04       		.byte	0x4
+ 227 0196 0402     		.2byte	0x204
+ 228 0198 19       		.byte	0x19
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 5
+
+
+ 229 0199 C4000000 		.4byte	0xc4
+ 230 019d 34       		.byte	0x34
+ 231 019e 0B       		.uleb128 0xb
+ 232 019f 00000000 		.4byte	.LASF20
+ 233 01a3 04       		.byte	0x4
+ 234 01a4 0502     		.2byte	0x205
+ 235 01a6 19       		.byte	0x19
+ 236 01a7 82000000 		.4byte	0x82
+ 237 01ab 44       		.byte	0x44
+ 238 01ac 0B       		.uleb128 0xb
+ 239 01ad 2D020000 		.4byte	.LASF21
+ 240 01b1 04       		.byte	0x4
+ 241 01b2 0702     		.2byte	0x207
+ 242 01b4 19       		.byte	0x19
+ 243 01b5 AF000000 		.4byte	0xaf
+ 244 01b9 48       		.byte	0x48
+ 245 01ba 0B       		.uleb128 0xb
+ 246 01bb CA010000 		.4byte	.LASF22
+ 247 01bf 04       		.byte	0x4
+ 248 01c0 0802     		.2byte	0x208
+ 249 01c2 19       		.byte	0x19
+ 250 01c3 82000000 		.4byte	0x82
+ 251 01c7 50       		.byte	0x50
+ 252 01c8 0B       		.uleb128 0xb
+ 253 01c9 63010000 		.4byte	.LASF23
+ 254 01cd 04       		.byte	0x4
+ 255 01ce 0902     		.2byte	0x209
+ 256 01d0 19       		.byte	0x19
+ 257 01d1 82000000 		.4byte	0x82
+ 258 01d5 54       		.byte	0x54
+ 259 01d6 0A       		.uleb128 0xa
+ 260 01d7 45435200 		.ascii	"ECR\000"
+ 261 01db 04       		.byte	0x4
+ 262 01dc 0A02     		.2byte	0x20a
+ 263 01de 19       		.byte	0x19
+ 264 01df 82000000 		.4byte	0x82
+ 265 01e3 58       		.byte	0x58
+ 266 01e4 0B       		.uleb128 0xb
+ 267 01e5 50010000 		.4byte	.LASF24
+ 268 01e9 04       		.byte	0x4
+ 269 01ea 0B02     		.2byte	0x20b
+ 270 01ec 19       		.byte	0x19
+ 271 01ed 82000000 		.4byte	0x82
+ 272 01f1 5C       		.byte	0x5c
+ 273 01f2 0A       		.uleb128 0xa
+ 274 01f3 41463100 		.ascii	"AF1\000"
+ 275 01f7 04       		.byte	0x4
+ 276 01f8 0C02     		.2byte	0x20c
+ 277 01fa 19       		.byte	0x19
+ 278 01fb 82000000 		.4byte	0x82
+ 279 01ff 60       		.byte	0x60
+ 280 0200 0A       		.uleb128 0xa
+ 281 0201 41463200 		.ascii	"AF2\000"
+ 282 0205 04       		.byte	0x4
+ 283 0206 0D02     		.2byte	0x20d
+ 284 0208 19       		.byte	0x19
+ 285 0209 82000000 		.4byte	0x82
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 6
+
+
+ 286 020d 64       		.byte	0x64
+ 287 020e 0A       		.uleb128 0xa
+ 288 020f 4F5200   		.ascii	"OR\000"
+ 289 0212 04       		.byte	0x4
+ 290 0213 0E02     		.2byte	0x20e
+ 291 0215 19       		.byte	0x19
+ 292 0216 82000000 		.4byte	0x82
+ 293 021a 68       		.byte	0x68
+ 294 021b 0B       		.uleb128 0xb
+ 295 021c 7E000000 		.4byte	.LASF25
+ 296 0220 04       		.byte	0x4
+ 297 0221 0F02     		.2byte	0x20f
+ 298 0223 19       		.byte	0x19
+ 299 0224 58020000 		.4byte	0x258
+ 300 0228 6C       		.byte	0x6c
+ 301 0229 0C       		.uleb128 0xc
+ 302 022a 44435200 		.ascii	"DCR\000"
+ 303 022e 04       		.byte	0x4
+ 304 022f 1002     		.2byte	0x210
+ 305 0231 19       		.byte	0x19
+ 306 0232 82000000 		.4byte	0x82
+ 307 0236 DC03     		.2byte	0x3dc
+ 308 0238 0D       		.uleb128 0xd
+ 309 0239 1A010000 		.4byte	.LASF26
+ 310 023d 04       		.byte	0x4
+ 311 023e 1102     		.2byte	0x211
+ 312 0240 19       		.byte	0x19
+ 313 0241 82000000 		.4byte	0x82
+ 314 0245 E003     		.2byte	0x3e0
+ 315 0247 00       		.byte	0
+ 316 0248 07       		.uleb128 0x7
+ 317 0249 82000000 		.4byte	0x82
+ 318 024d 58020000 		.4byte	0x258
+ 319 0251 08       		.uleb128 0x8
+ 320 0252 24000000 		.4byte	0x24
+ 321 0256 DB       		.byte	0xdb
+ 322 0257 00       		.byte	0
+ 323 0258 05       		.uleb128 0x5
+ 324 0259 48020000 		.4byte	0x248
+ 325 025d 0E       		.uleb128 0xe
+ 326 025e 72000000 		.4byte	.LASF27
+ 327 0262 04       		.byte	0x4
+ 328 0263 1902     		.2byte	0x219
+ 329 0265 03       		.byte	0x3
+ 330 0266 D0000000 		.4byte	0xd0
+ 331 026a 0F       		.uleb128 0xf
+ 332 026b 05000000 		.4byte	.LASF32
+ 333 026f 05       		.byte	0x5
+ 334 0270 B3       		.byte	0xb3
+ 335 0271 06       		.byte	0x6
+ 336 0272 C9000000 		.4byte	0xc9
+ 337 0276 10       		.uleb128 0x10
+ 338 0277 F9010000 		.4byte	.LASF44
+ 339 027b 05       		.byte	0x5
+ 340 027c A3       		.byte	0xa3
+ 341 027d 0B       		.byte	0xb
+ 342 027e 93000000 		.4byte	0x93
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 7
+
+
+ 343 0282 90020000 		.4byte	0x290
+ 344 0286 11       		.uleb128 0x11
+ 345 0287 8D000000 		.4byte	.LASF28
+ 346 028b A0020000 		.4byte	0x2a0
+ 347 028f 00       		.byte	0
+ 348 0290 07       		.uleb128 0x7
+ 349 0291 8E000000 		.4byte	0x8e
+ 350 0295 A0020000 		.4byte	0x2a0
+ 351 0299 08       		.uleb128 0x8
+ 352 029a 24000000 		.4byte	0x24
+ 353 029e 0A       		.byte	0xa
+ 354 029f 00       		.byte	0
+ 355 02a0 06       		.uleb128 0x6
+ 356 02a1 90020000 		.4byte	0x290
+ 357 02a5 12       		.uleb128 0x12
+ 358 02a6 E2010000 		.4byte	.LASF29
+ 359 02aa 05       		.byte	0x5
+ 360 02ab 93       		.byte	0x93
+ 361 02ac 06       		.byte	0x6
+ 362 02ad C7020000 		.4byte	0x2c7
+ 363 02b1 13       		.uleb128 0x13
+ 364 02b2 BA000000 		.4byte	.LASF31
+ 365 02b6 05       		.byte	0x5
+ 366 02b7 93       		.byte	0x93
+ 367 02b8 1B       		.byte	0x1b
+ 368 02b9 93000000 		.4byte	0x93
+ 369 02bd 11       		.uleb128 0x11
+ 370 02be 8D000000 		.4byte	.LASF28
+ 371 02c2 A0020000 		.4byte	0x2a0
+ 372 02c6 00       		.byte	0
+ 373 02c7 14       		.uleb128 0x14
+ 374 02c8 1F010000 		.4byte	.LASF34
+ 375 02cc 05       		.byte	0x5
+ 376 02cd 85       		.byte	0x85
+ 377 02ce 06       		.byte	0x6
+ 378 02cf 12       		.uleb128 0x12
+ 379 02d0 56010000 		.4byte	.LASF30
+ 380 02d4 05       		.byte	0x5
+ 381 02d5 77       		.byte	0x77
+ 382 02d6 06       		.byte	0x6
+ 383 02d7 F1020000 		.4byte	0x2f1
+ 384 02db 13       		.uleb128 0x13
+ 385 02dc BA000000 		.4byte	.LASF31
+ 386 02e0 05       		.byte	0x5
+ 387 02e1 77       		.byte	0x77
+ 388 02e2 1D       		.byte	0x1d
+ 389 02e3 93000000 		.4byte	0x93
+ 390 02e7 11       		.uleb128 0x11
+ 391 02e8 8D000000 		.4byte	.LASF28
+ 392 02ec 01030000 		.4byte	0x301
+ 393 02f0 00       		.byte	0
+ 394 02f1 07       		.uleb128 0x7
+ 395 02f2 8E000000 		.4byte	0x8e
+ 396 02f6 01030000 		.4byte	0x301
+ 397 02fa 08       		.uleb128 0x8
+ 398 02fb 24000000 		.4byte	0x24
+ 399 02ff 0C       		.byte	0xc
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 8
+
+
+ 400 0300 00       		.byte	0
+ 401 0301 06       		.uleb128 0x6
+ 402 0302 F1020000 		.4byte	0x2f1
+ 403 0306 0F       		.uleb128 0xf
+ 404 0307 15000000 		.4byte	.LASF33
+ 405 030b 05       		.byte	0x5
+ 406 030c 67       		.byte	0x67
+ 407 030d 0B       		.byte	0xb
+ 408 030e 93000000 		.4byte	0x93
+ 409 0312 14       		.uleb128 0x14
+ 410 0313 68010000 		.4byte	.LASF35
+ 411 0317 05       		.byte	0x5
+ 412 0318 45       		.byte	0x45
+ 413 0319 06       		.byte	0x6
+ 414 031a 15       		.uleb128 0x15
+ 415 031b 5B000000 		.4byte	.LASF36
+ 416 031f 06       		.byte	0x6
+ 417 0320 0003     		.2byte	0x300
+ 418 0322 14       		.byte	0x14
+ 419 0323 C9000000 		.4byte	0xc9
+ 420 0327 15       		.uleb128 0x15
+ 421 0328 A3010000 		.4byte	.LASF37
+ 422 032c 06       		.byte	0x6
+ 423 032d F202     		.2byte	0x2f2
+ 424 032f 19       		.byte	0x19
+ 425 0330 93000000 		.4byte	0x93
+ 426 0334 16       		.uleb128 0x16
+ 427 0335 A9000000 		.4byte	.LASF38
+ 428 0339 06       		.byte	0x6
+ 429 033a E602     		.2byte	0x2e6
+ 430 033c 14       		.byte	0x14
+ 431 033d 4F030000 		.4byte	0x34f
+ 432 0341 17       		.uleb128 0x17
+ 433 0342 BA000000 		.4byte	.LASF31
+ 434 0346 06       		.byte	0x6
+ 435 0347 E602     		.2byte	0x2e6
+ 436 0349 2F       		.byte	0x2f
+ 437 034a 93000000 		.4byte	0x93
+ 438 034e 00       		.byte	0
+ 439 034f 18       		.uleb128 0x18
+ 440 0350 49000000 		.4byte	.LASF45
+ 441 0354 06       		.byte	0x6
+ 442 0355 D602     		.2byte	0x2d6
+ 443 0357 14       		.byte	0x14
+ 444 0358 16       		.uleb128 0x16
+ 445 0359 96000000 		.4byte	.LASF39
+ 446 035d 06       		.byte	0x6
+ 447 035e C602     		.2byte	0x2c6
+ 448 0360 14       		.byte	0x14
+ 449 0361 73030000 		.4byte	0x373
+ 450 0365 17       		.uleb128 0x17
+ 451 0366 BA000000 		.4byte	.LASF31
+ 452 036a 06       		.byte	0x6
+ 453 036b C602     		.2byte	0x2c6
+ 454 036d 31       		.byte	0x31
+ 455 036e 93000000 		.4byte	0x93
+ 456 0372 00       		.byte	0
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 9
+
+
+ 457 0373 15       		.uleb128 0x15
+ 458 0374 2B010000 		.4byte	.LASF40
+ 459 0378 06       		.byte	0x6
+ 460 0379 B802     		.2byte	0x2b8
+ 461 037b 19       		.byte	0x19
+ 462 037c 93000000 		.4byte	0x93
+ 463 0380 00       		.byte	0
+ 464              		.section	.gnu.debuglto_.debug_abbrev,"e",%progbits
+ 465              	.Ldebug_abbrev0:
+ 466 0000 01       		.uleb128 0x1
+ 467 0001 11       		.uleb128 0x11
+ 468 0002 01       		.byte	0x1
+ 469 0003 25       		.uleb128 0x25
+ 470 0004 0E       		.uleb128 0xe
+ 471 0005 13       		.uleb128 0x13
+ 472 0006 0B       		.uleb128 0xb
+ 473 0007 03       		.uleb128 0x3
+ 474 0008 0E       		.uleb128 0xe
+ 475 0009 1B       		.uleb128 0x1b
+ 476 000a 0E       		.uleb128 0xe
+ 477 000b 10       		.uleb128 0x10
+ 478 000c 17       		.uleb128 0x17
+ 479 000d 00       		.byte	0
+ 480 000e 00       		.byte	0
+ 481 000f 02       		.uleb128 0x2
+ 482 0010 24       		.uleb128 0x24
+ 483 0011 00       		.byte	0
+ 484 0012 0B       		.uleb128 0xb
+ 485 0013 0B       		.uleb128 0xb
+ 486 0014 3E       		.uleb128 0x3e
+ 487 0015 0B       		.uleb128 0xb
+ 488 0016 03       		.uleb128 0x3
+ 489 0017 08       		.uleb128 0x8
+ 490 0018 00       		.byte	0
+ 491 0019 00       		.byte	0
+ 492 001a 03       		.uleb128 0x3
+ 493 001b 24       		.uleb128 0x24
+ 494 001c 00       		.byte	0
+ 495 001d 0B       		.uleb128 0xb
+ 496 001e 0B       		.uleb128 0xb
+ 497 001f 3E       		.uleb128 0x3e
+ 498 0020 0B       		.uleb128 0xb
+ 499 0021 03       		.uleb128 0x3
+ 500 0022 0E       		.uleb128 0xe
+ 501 0023 00       		.byte	0
+ 502 0024 00       		.byte	0
+ 503 0025 04       		.uleb128 0x4
+ 504 0026 16       		.uleb128 0x16
+ 505 0027 00       		.byte	0
+ 506 0028 03       		.uleb128 0x3
+ 507 0029 0E       		.uleb128 0xe
+ 508 002a 3A       		.uleb128 0x3a
+ 509 002b 0B       		.uleb128 0xb
+ 510 002c 3B       		.uleb128 0x3b
+ 511 002d 0B       		.uleb128 0xb
+ 512 002e 39       		.uleb128 0x39
+ 513 002f 0B       		.uleb128 0xb
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 10
+
+
+ 514 0030 49       		.uleb128 0x49
+ 515 0031 13       		.uleb128 0x13
+ 516 0032 00       		.byte	0
+ 517 0033 00       		.byte	0
+ 518 0034 05       		.uleb128 0x5
+ 519 0035 35       		.uleb128 0x35
+ 520 0036 00       		.byte	0
+ 521 0037 49       		.uleb128 0x49
+ 522 0038 13       		.uleb128 0x13
+ 523 0039 00       		.byte	0
+ 524 003a 00       		.byte	0
+ 525 003b 06       		.uleb128 0x6
+ 526 003c 26       		.uleb128 0x26
+ 527 003d 00       		.byte	0
+ 528 003e 49       		.uleb128 0x49
+ 529 003f 13       		.uleb128 0x13
+ 530 0040 00       		.byte	0
+ 531 0041 00       		.byte	0
+ 532 0042 07       		.uleb128 0x7
+ 533 0043 01       		.uleb128 0x1
+ 534 0044 01       		.byte	0x1
+ 535 0045 49       		.uleb128 0x49
+ 536 0046 13       		.uleb128 0x13
+ 537 0047 01       		.uleb128 0x1
+ 538 0048 13       		.uleb128 0x13
+ 539 0049 00       		.byte	0
+ 540 004a 00       		.byte	0
+ 541 004b 08       		.uleb128 0x8
+ 542 004c 21       		.uleb128 0x21
+ 543 004d 00       		.byte	0
+ 544 004e 49       		.uleb128 0x49
+ 545 004f 13       		.uleb128 0x13
+ 546 0050 2F       		.uleb128 0x2f
+ 547 0051 0B       		.uleb128 0xb
+ 548 0052 00       		.byte	0
+ 549 0053 00       		.byte	0
+ 550 0054 09       		.uleb128 0x9
+ 551 0055 13       		.uleb128 0x13
+ 552 0056 01       		.byte	0x1
+ 553 0057 0B       		.uleb128 0xb
+ 554 0058 05       		.uleb128 0x5
+ 555 0059 3A       		.uleb128 0x3a
+ 556 005a 0B       		.uleb128 0xb
+ 557 005b 3B       		.uleb128 0x3b
+ 558 005c 05       		.uleb128 0x5
+ 559 005d 39       		.uleb128 0x39
+ 560 005e 0B       		.uleb128 0xb
+ 561 005f 01       		.uleb128 0x1
+ 562 0060 13       		.uleb128 0x13
+ 563 0061 00       		.byte	0
+ 564 0062 00       		.byte	0
+ 565 0063 0A       		.uleb128 0xa
+ 566 0064 0D       		.uleb128 0xd
+ 567 0065 00       		.byte	0
+ 568 0066 03       		.uleb128 0x3
+ 569 0067 08       		.uleb128 0x8
+ 570 0068 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 11
+
+
+ 571 0069 0B       		.uleb128 0xb
+ 572 006a 3B       		.uleb128 0x3b
+ 573 006b 05       		.uleb128 0x5
+ 574 006c 39       		.uleb128 0x39
+ 575 006d 0B       		.uleb128 0xb
+ 576 006e 49       		.uleb128 0x49
+ 577 006f 13       		.uleb128 0x13
+ 578 0070 38       		.uleb128 0x38
+ 579 0071 0B       		.uleb128 0xb
+ 580 0072 00       		.byte	0
+ 581 0073 00       		.byte	0
+ 582 0074 0B       		.uleb128 0xb
+ 583 0075 0D       		.uleb128 0xd
+ 584 0076 00       		.byte	0
+ 585 0077 03       		.uleb128 0x3
+ 586 0078 0E       		.uleb128 0xe
+ 587 0079 3A       		.uleb128 0x3a
+ 588 007a 0B       		.uleb128 0xb
+ 589 007b 3B       		.uleb128 0x3b
+ 590 007c 05       		.uleb128 0x5
+ 591 007d 39       		.uleb128 0x39
+ 592 007e 0B       		.uleb128 0xb
+ 593 007f 49       		.uleb128 0x49
+ 594 0080 13       		.uleb128 0x13
+ 595 0081 38       		.uleb128 0x38
+ 596 0082 0B       		.uleb128 0xb
+ 597 0083 00       		.byte	0
+ 598 0084 00       		.byte	0
+ 599 0085 0C       		.uleb128 0xc
+ 600 0086 0D       		.uleb128 0xd
+ 601 0087 00       		.byte	0
+ 602 0088 03       		.uleb128 0x3
+ 603 0089 08       		.uleb128 0x8
+ 604 008a 3A       		.uleb128 0x3a
+ 605 008b 0B       		.uleb128 0xb
+ 606 008c 3B       		.uleb128 0x3b
+ 607 008d 05       		.uleb128 0x5
+ 608 008e 39       		.uleb128 0x39
+ 609 008f 0B       		.uleb128 0xb
+ 610 0090 49       		.uleb128 0x49
+ 611 0091 13       		.uleb128 0x13
+ 612 0092 38       		.uleb128 0x38
+ 613 0093 05       		.uleb128 0x5
+ 614 0094 00       		.byte	0
+ 615 0095 00       		.byte	0
+ 616 0096 0D       		.uleb128 0xd
+ 617 0097 0D       		.uleb128 0xd
+ 618 0098 00       		.byte	0
+ 619 0099 03       		.uleb128 0x3
+ 620 009a 0E       		.uleb128 0xe
+ 621 009b 3A       		.uleb128 0x3a
+ 622 009c 0B       		.uleb128 0xb
+ 623 009d 3B       		.uleb128 0x3b
+ 624 009e 05       		.uleb128 0x5
+ 625 009f 39       		.uleb128 0x39
+ 626 00a0 0B       		.uleb128 0xb
+ 627 00a1 49       		.uleb128 0x49
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 12
+
+
+ 628 00a2 13       		.uleb128 0x13
+ 629 00a3 38       		.uleb128 0x38
+ 630 00a4 05       		.uleb128 0x5
+ 631 00a5 00       		.byte	0
+ 632 00a6 00       		.byte	0
+ 633 00a7 0E       		.uleb128 0xe
+ 634 00a8 16       		.uleb128 0x16
+ 635 00a9 00       		.byte	0
+ 636 00aa 03       		.uleb128 0x3
+ 637 00ab 0E       		.uleb128 0xe
+ 638 00ac 3A       		.uleb128 0x3a
+ 639 00ad 0B       		.uleb128 0xb
+ 640 00ae 3B       		.uleb128 0x3b
+ 641 00af 05       		.uleb128 0x5
+ 642 00b0 39       		.uleb128 0x39
+ 643 00b1 0B       		.uleb128 0xb
+ 644 00b2 49       		.uleb128 0x49
+ 645 00b3 13       		.uleb128 0x13
+ 646 00b4 00       		.byte	0
+ 647 00b5 00       		.byte	0
+ 648 00b6 0F       		.uleb128 0xf
+ 649 00b7 2E       		.uleb128 0x2e
+ 650 00b8 00       		.byte	0
+ 651 00b9 3F       		.uleb128 0x3f
+ 652 00ba 19       		.uleb128 0x19
+ 653 00bb 03       		.uleb128 0x3
+ 654 00bc 0E       		.uleb128 0xe
+ 655 00bd 3A       		.uleb128 0x3a
+ 656 00be 0B       		.uleb128 0xb
+ 657 00bf 3B       		.uleb128 0x3b
+ 658 00c0 0B       		.uleb128 0xb
+ 659 00c1 39       		.uleb128 0x39
+ 660 00c2 0B       		.uleb128 0xb
+ 661 00c3 27       		.uleb128 0x27
+ 662 00c4 19       		.uleb128 0x19
+ 663 00c5 49       		.uleb128 0x49
+ 664 00c6 13       		.uleb128 0x13
+ 665 00c7 00       		.byte	0
+ 666 00c8 00       		.byte	0
+ 667 00c9 10       		.uleb128 0x10
+ 668 00ca 2E       		.uleb128 0x2e
+ 669 00cb 01       		.byte	0x1
+ 670 00cc 3F       		.uleb128 0x3f
+ 671 00cd 19       		.uleb128 0x19
+ 672 00ce 03       		.uleb128 0x3
+ 673 00cf 0E       		.uleb128 0xe
+ 674 00d0 3A       		.uleb128 0x3a
+ 675 00d1 0B       		.uleb128 0xb
+ 676 00d2 3B       		.uleb128 0x3b
+ 677 00d3 0B       		.uleb128 0xb
+ 678 00d4 39       		.uleb128 0x39
+ 679 00d5 0B       		.uleb128 0xb
+ 680 00d6 27       		.uleb128 0x27
+ 681 00d7 19       		.uleb128 0x19
+ 682 00d8 49       		.uleb128 0x49
+ 683 00d9 13       		.uleb128 0x13
+ 684 00da 01       		.uleb128 0x1
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 13
+
+
+ 685 00db 13       		.uleb128 0x13
+ 686 00dc 00       		.byte	0
+ 687 00dd 00       		.byte	0
+ 688 00de 11       		.uleb128 0x11
+ 689 00df 34       		.uleb128 0x34
+ 690 00e0 00       		.byte	0
+ 691 00e1 03       		.uleb128 0x3
+ 692 00e2 0E       		.uleb128 0xe
+ 693 00e3 49       		.uleb128 0x49
+ 694 00e4 13       		.uleb128 0x13
+ 695 00e5 34       		.uleb128 0x34
+ 696 00e6 19       		.uleb128 0x19
+ 697 00e7 00       		.byte	0
+ 698 00e8 00       		.byte	0
+ 699 00e9 12       		.uleb128 0x12
+ 700 00ea 2E       		.uleb128 0x2e
+ 701 00eb 01       		.byte	0x1
+ 702 00ec 3F       		.uleb128 0x3f
+ 703 00ed 19       		.uleb128 0x19
+ 704 00ee 03       		.uleb128 0x3
+ 705 00ef 0E       		.uleb128 0xe
+ 706 00f0 3A       		.uleb128 0x3a
+ 707 00f1 0B       		.uleb128 0xb
+ 708 00f2 3B       		.uleb128 0x3b
+ 709 00f3 0B       		.uleb128 0xb
+ 710 00f4 39       		.uleb128 0x39
+ 711 00f5 0B       		.uleb128 0xb
+ 712 00f6 27       		.uleb128 0x27
+ 713 00f7 19       		.uleb128 0x19
+ 714 00f8 01       		.uleb128 0x1
+ 715 00f9 13       		.uleb128 0x13
+ 716 00fa 00       		.byte	0
+ 717 00fb 00       		.byte	0
+ 718 00fc 13       		.uleb128 0x13
+ 719 00fd 05       		.uleb128 0x5
+ 720 00fe 00       		.byte	0
+ 721 00ff 03       		.uleb128 0x3
+ 722 0100 0E       		.uleb128 0xe
+ 723 0101 3A       		.uleb128 0x3a
+ 724 0102 0B       		.uleb128 0xb
+ 725 0103 3B       		.uleb128 0x3b
+ 726 0104 0B       		.uleb128 0xb
+ 727 0105 39       		.uleb128 0x39
+ 728 0106 0B       		.uleb128 0xb
+ 729 0107 49       		.uleb128 0x49
+ 730 0108 13       		.uleb128 0x13
+ 731 0109 00       		.byte	0
+ 732 010a 00       		.byte	0
+ 733 010b 14       		.uleb128 0x14
+ 734 010c 2E       		.uleb128 0x2e
+ 735 010d 00       		.byte	0
+ 736 010e 3F       		.uleb128 0x3f
+ 737 010f 19       		.uleb128 0x19
+ 738 0110 03       		.uleb128 0x3
+ 739 0111 0E       		.uleb128 0xe
+ 740 0112 3A       		.uleb128 0x3a
+ 741 0113 0B       		.uleb128 0xb
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 14
+
+
+ 742 0114 3B       		.uleb128 0x3b
+ 743 0115 0B       		.uleb128 0xb
+ 744 0116 39       		.uleb128 0x39
+ 745 0117 0B       		.uleb128 0xb
+ 746 0118 27       		.uleb128 0x27
+ 747 0119 19       		.uleb128 0x19
+ 748 011a 00       		.byte	0
+ 749 011b 00       		.byte	0
+ 750 011c 15       		.uleb128 0x15
+ 751 011d 2E       		.uleb128 0x2e
+ 752 011e 00       		.byte	0
+ 753 011f 03       		.uleb128 0x3
+ 754 0120 0E       		.uleb128 0xe
+ 755 0121 3A       		.uleb128 0x3a
+ 756 0122 0B       		.uleb128 0xb
+ 757 0123 3B       		.uleb128 0x3b
+ 758 0124 05       		.uleb128 0x5
+ 759 0125 39       		.uleb128 0x39
+ 760 0126 0B       		.uleb128 0xb
+ 761 0127 27       		.uleb128 0x27
+ 762 0128 19       		.uleb128 0x19
+ 763 0129 49       		.uleb128 0x49
+ 764 012a 13       		.uleb128 0x13
+ 765 012b 00       		.byte	0
+ 766 012c 00       		.byte	0
+ 767 012d 16       		.uleb128 0x16
+ 768 012e 2E       		.uleb128 0x2e
+ 769 012f 01       		.byte	0x1
+ 770 0130 03       		.uleb128 0x3
+ 771 0131 0E       		.uleb128 0xe
+ 772 0132 3A       		.uleb128 0x3a
+ 773 0133 0B       		.uleb128 0xb
+ 774 0134 3B       		.uleb128 0x3b
+ 775 0135 05       		.uleb128 0x5
+ 776 0136 39       		.uleb128 0x39
+ 777 0137 0B       		.uleb128 0xb
+ 778 0138 27       		.uleb128 0x27
+ 779 0139 19       		.uleb128 0x19
+ 780 013a 01       		.uleb128 0x1
+ 781 013b 13       		.uleb128 0x13
+ 782 013c 00       		.byte	0
+ 783 013d 00       		.byte	0
+ 784 013e 17       		.uleb128 0x17
+ 785 013f 05       		.uleb128 0x5
+ 786 0140 00       		.byte	0
+ 787 0141 03       		.uleb128 0x3
+ 788 0142 0E       		.uleb128 0xe
+ 789 0143 3A       		.uleb128 0x3a
+ 790 0144 0B       		.uleb128 0xb
+ 791 0145 3B       		.uleb128 0x3b
+ 792 0146 05       		.uleb128 0x5
+ 793 0147 39       		.uleb128 0x39
+ 794 0148 0B       		.uleb128 0xb
+ 795 0149 49       		.uleb128 0x49
+ 796 014a 13       		.uleb128 0x13
+ 797 014b 00       		.byte	0
+ 798 014c 00       		.byte	0
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 15
+
+
+ 799 014d 18       		.uleb128 0x18
+ 800 014e 2E       		.uleb128 0x2e
+ 801 014f 00       		.byte	0
+ 802 0150 03       		.uleb128 0x3
+ 803 0151 0E       		.uleb128 0xe
+ 804 0152 3A       		.uleb128 0x3a
+ 805 0153 0B       		.uleb128 0xb
+ 806 0154 3B       		.uleb128 0x3b
+ 807 0155 05       		.uleb128 0x5
+ 808 0156 39       		.uleb128 0x39
+ 809 0157 0B       		.uleb128 0xb
+ 810 0158 27       		.uleb128 0x27
+ 811 0159 19       		.uleb128 0x19
+ 812 015a 00       		.byte	0
+ 813 015b 00       		.byte	0
+ 814 015c 00       		.byte	0
+ 815              		.section	.gnu.debuglto_.debug_line,"e",%progbits
+ 816              	.Ldebug_line0:
+ 817 0000 BB010000 		.4byte	.LELT0-.LSLT0
+ 818              	.LSLT0:
+ 819 0004 0400     		.2byte	0x4
+ 820 0006 B5010000 		.4byte	.LELTP0-.LASLTP0
+ 821              	.LASLTP0:
+ 822 000a 01       		.byte	0x1
+ 823 000b 01       		.byte	0x1
+ 824 000c 01       		.byte	0x1
+ 825 000d F6       		.byte	0xf6
+ 826 000e F2       		.byte	0xf2
+ 827 000f 0D       		.byte	0xd
+ 828 0010 00       		.byte	0
+ 829 0011 01       		.byte	0x1
+ 830 0012 01       		.byte	0x1
+ 831 0013 01       		.byte	0x1
+ 832 0014 01       		.byte	0x1
+ 833 0015 00       		.byte	0
+ 834 0016 00       		.byte	0
+ 835 0017 00       		.byte	0
+ 836 0018 01       		.byte	0x1
+ 837 0019 00       		.byte	0
+ 838 001a 00       		.byte	0
+ 839 001b 01       		.byte	0x1
+ 840 001c 2E2E2F2E 		.ascii	"../../chibios2111/os/hal/ports/STM32/LLD/SYSTICKv1"
+ 840      2E2F6368 
+ 840      6962696F 
+ 840      73323131 
+ 840      312F6F73 
+ 841 004e 00       		.byte	0
+ 842 004f 2E2E2F2E 		.ascii	"../../chibios2111/os/hal/ports/STM32/LLD/TIMv1"
+ 842      2E2F6368 
+ 842      6962696F 
+ 842      73323131 
+ 842      312F6F73 
+ 843 007d 00       		.byte	0
+ 844 007e 2E2E2F2E 		.ascii	"../../chibios2111/os/hal/src"
+ 844      2E2F6368 
+ 844      6962696F 
+ 844      73323131 
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 16
+
+
+ 844      312F6F73 
+ 845 009a 00       		.byte	0
+ 846 009b 2E2E2F2E 		.ascii	"../../chibios2111/os/rt/include"
+ 846      2E2F6368 
+ 846      6962696F 
+ 846      73323131 
+ 846      312F6F73 
+ 847 00ba 00       		.byte	0
+ 848 00bb 633A5C63 		.ascii	"c:\\chibistudio\\tools\\gnu tools arm embedded\\10."
+ 848      68696269 
+ 848      73747564 
+ 848      696F5C74 
+ 848      6F6F6C73 
+ 849 00ea 33203230 		.ascii	"3 2021.10\\arm-none-eabi\\include\\machine"
+ 849      32312E31 
+ 849      305C6172 
+ 849      6D2D6E6F 
+ 849      6E652D65 
+ 850 0111 00       		.byte	0
+ 851 0112 633A5C63 		.ascii	"c:\\chibistudio\\tools\\gnu tools arm embedded\\10."
+ 851      68696269 
+ 851      73747564 
+ 851      696F5C74 
+ 851      6F6F6C73 
+ 852 0141 33203230 		.ascii	"3 2021.10\\arm-none-eabi\\include\\sys"
+ 852      32312E31 
+ 852      305C6172 
+ 852      6D2D6E6F 
+ 852      6E652D65 
+ 853 0164 00       		.byte	0
+ 854 0165 00       		.byte	0
+ 855 0166 5F646566 		.ascii	"_default_types.h\000"
+ 855      61756C74 
+ 855      5F747970 
+ 855      65732E68 
+ 855      00
+ 856 0177 05       		.uleb128 0x5
+ 857 0178 00       		.uleb128 0
+ 858 0179 00       		.uleb128 0
+ 859 017a 5F737464 		.ascii	"_stdint.h\000"
+ 859      696E742E 
+ 859      6800
+ 860 0184 06       		.uleb128 0x6
+ 861 0185 00       		.uleb128 0
+ 862 0186 00       		.uleb128 0
+ 863 0187 63687469 		.ascii	"chtime.h\000"
+ 863      6D652E68 
+ 863      00
+ 864 0190 04       		.uleb128 0x4
+ 865 0191 00       		.uleb128 0
+ 866 0192 00       		.uleb128 0
+ 867 0193 73746D33 		.ascii	"stm32_tim.h\000"
+ 867      325F7469 
+ 867      6D2E6800 
+ 868 019f 02       		.uleb128 0x2
+ 869 01a0 00       		.uleb128 0
+ 870 01a1 00       		.uleb128 0
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 17
+
+
+ 871 01a2 68616C5F 		.ascii	"hal_st.c\000"
+ 871      73742E63 
+ 871      00
+ 872 01ab 03       		.uleb128 0x3
+ 873 01ac 00       		.uleb128 0
+ 874 01ad 00       		.uleb128 0
+ 875 01ae 68616C5F 		.ascii	"hal_st_lld.h\000"
+ 875      73745F6C 
+ 875      6C642E68 
+ 875      00
+ 876 01bb 01       		.uleb128 0x1
+ 877 01bc 00       		.uleb128 0
+ 878 01bd 00       		.uleb128 0
+ 879 01be 00       		.byte	0
+ 880              	.LELTP0:
+ 881              	.LELT0:
+ 882              		.section	.gnu.debuglto_.debug_str,"eMS",%progbits,1
+ 883              	.LASF20:
+ 884 0000 42445452 		.ascii	"BDTR\000"
+ 884      00
+ 885              	.LASF32:
+ 886 0005 73744973 		.ascii	"stIsAlarmActive\000"
+ 886      416C6172 
+ 886      6D416374 
+ 886      69766500 
+ 887              	.LASF33:
+ 888 0015 73744765 		.ascii	"stGetCounter\000"
+ 888      74436F75 
+ 888      6E746572 
+ 888      00
+ 889              	.LASF13:
+ 890 0022 73797374 		.ascii	"systime_t\000"
+ 890      696D655F 
+ 890      7400
+ 891              	.LASF6:
+ 892 002c 73686F72 		.ascii	"short unsigned int\000"
+ 892      7420756E 
+ 892      7369676E 
+ 892      65642069 
+ 892      6E7400
+ 893              	.LASF5:
+ 894 003f 73686F72 		.ascii	"short int\000"
+ 894      7420696E 
+ 894      7400
+ 895              	.LASF45:
+ 896 0049 73745F6C 		.ascii	"st_lld_stop_alarm\000"
+ 896      6C645F73 
+ 896      746F705F 
+ 896      616C6172 
+ 896      6D00
+ 897              	.LASF36:
+ 898 005b 73745F6C 		.ascii	"st_lld_is_alarm_active\000"
+ 898      6C645F69 
+ 898      735F616C 
+ 898      61726D5F 
+ 898      61637469 
+ 899              	.LASF27:
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 18
+
+
+ 900 0072 73746D33 		.ascii	"stm32_tim_t\000"
+ 900      325F7469 
+ 900      6D5F7400 
+ 901              	.LASF25:
+ 902 007e 52455345 		.ascii	"RESERVED0\000"
+ 902      52564544 
+ 902      3000
+ 903              	.LASF16:
+ 904 0088 44494552 		.ascii	"DIER\000"
+ 904      00
+ 905              	.LASF28:
+ 906 008d 5F5F6675 		.ascii	"__func__\000"
+ 906      6E635F5F 
+ 906      00
+ 907              	.LASF39:
+ 908 0096 73745F6C 		.ascii	"st_lld_start_alarm\000"
+ 908      6C645F73 
+ 908      74617274 
+ 908      5F616C61 
+ 908      726D00
+ 909              	.LASF38:
+ 910 00a9 73745F6C 		.ascii	"st_lld_set_alarm\000"
+ 910      6C645F73 
+ 910      65745F61 
+ 910      6C61726D 
+ 910      00
+ 911              	.LASF31:
+ 912 00ba 61627374 		.ascii	"abstime\000"
+ 912      696D6500 
+ 913              	.LASF43:
+ 914 00c2 433A5C43 		.ascii	"C:\\ChibiStudio\\workspace_user\\GestureLogicv4\000"
+ 914      68696269 
+ 914      53747564 
+ 914      696F5C77 
+ 914      6F726B73 
+ 915              	.LASF8:
+ 916 00ef 6C6F6E67 		.ascii	"long unsigned int\000"
+ 916      20756E73 
+ 916      69676E65 
+ 916      6420696E 
+ 916      7400
+ 917              	.LASF4:
+ 918 0101 756E7369 		.ascii	"unsigned char\000"
+ 918      676E6564 
+ 918      20636861 
+ 918      7200
+ 919              	.LASF10:
+ 920 010f 5F5F7569 		.ascii	"__uint32_t\000"
+ 920      6E743332 
+ 920      5F7400
+ 921              	.LASF26:
+ 922 011a 444D4152 		.ascii	"DMAR\000"
+ 922      00
+ 923              	.LASF34:
+ 924 011f 73745374 		.ascii	"stStopAlarm\000"
+ 924      6F70416C 
+ 924      61726D00 
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 19
+
+
+ 925              	.LASF40:
+ 926 012b 73745F6C 		.ascii	"st_lld_get_counter\000"
+ 926      6C645F67 
+ 926      65745F63 
+ 926      6F756E74 
+ 926      657200
+ 927              	.LASF0:
+ 928 013e 756E7369 		.ascii	"unsigned int\000"
+ 928      676E6564 
+ 928      20696E74 
+ 928      00
+ 929              	.LASF12:
+ 930 014b 63686172 		.ascii	"char\000"
+ 930      00
+ 931              	.LASF24:
+ 932 0150 54495345 		.ascii	"TISEL\000"
+ 932      4C00
+ 933              	.LASF30:
+ 934 0156 73745374 		.ascii	"stStartAlarm\000"
+ 934      61727441 
+ 934      6C61726D 
+ 934      00
+ 935              	.LASF23:
+ 936 0163 44545232 		.ascii	"DTR2\000"
+ 936      00
+ 937              	.LASF35:
+ 938 0168 7374496E 		.ascii	"stInit\000"
+ 938      697400
+ 939              	.LASF1:
+ 940 016f 6C6F6E67 		.ascii	"long long int\000"
+ 940      206C6F6E 
+ 940      6720696E 
+ 940      7400
+ 941              	.LASF42:
+ 942 017d 2E2E2F2E 		.ascii	"../../chibios2111/os/hal/src/hal_st.c\000"
+ 942      2E2F6368 
+ 942      6962696F 
+ 942      73323131 
+ 942      312F6F73 
+ 943              	.LASF37:
+ 944 01a3 73745F6C 		.ascii	"st_lld_get_alarm\000"
+ 944      6C645F67 
+ 944      65745F61 
+ 944      6C61726D 
+ 944      00
+ 945              	.LASF19:
+ 946 01b4 43434552 		.ascii	"CCER\000"
+ 946      00
+ 947              	.LASF15:
+ 948 01b9 534D4352 		.ascii	"SMCR\000"
+ 948      00
+ 949              	.LASF17:
+ 950 01be 43434D52 		.ascii	"CCMR1\000"
+ 950      3100
+ 951              	.LASF18:
+ 952 01c4 43434D52 		.ascii	"CCMR2\000"
+ 952      3200
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 20
+
+
+ 953              	.LASF22:
+ 954 01ca 43434D52 		.ascii	"CCMR3\000"
+ 954      3300
+ 955              	.LASF11:
+ 956 01d0 75696E74 		.ascii	"uint32_t\000"
+ 956      33325F74 
+ 956      00
+ 957              	.LASF7:
+ 958 01d9 6C6F6E67 		.ascii	"long int\000"
+ 958      20696E74 
+ 958      00
+ 959              	.LASF29:
+ 960 01e2 73745365 		.ascii	"stSetAlarm\000"
+ 960      74416C61 
+ 960      726D00
+ 961              	.LASF2:
+ 962 01ed 6C6F6E67 		.ascii	"long double\000"
+ 962      20646F75 
+ 962      626C6500 
+ 963              	.LASF44:
+ 964 01f9 73744765 		.ascii	"stGetAlarm\000"
+ 964      74416C61 
+ 964      726D00
+ 965              	.LASF3:
+ 966 0204 7369676E 		.ascii	"signed char\000"
+ 966      65642063 
+ 966      68617200 
+ 967              	.LASF14:
+ 968 0210 5F426F6F 		.ascii	"_Bool\000"
+ 968      6C00
+ 969              	.LASF9:
+ 970 0216 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 970      206C6F6E 
+ 970      6720756E 
+ 970      7369676E 
+ 970      65642069 
+ 971              	.LASF21:
+ 972 022d 43435852 		.ascii	"CCXR\000"
+ 972      00
+ 973              	.LASF41:
+ 974 0232 474E5520 		.ascii	"GNU C17 10.3.1 20210824 (release) -mcpu=cortex-m4 -"
+ 974      43313720 
+ 974      31302E33 
+ 974      2E312032 
+ 974      30323130 
+ 975 0265 6D746875 		.ascii	"mthumb -mfloat-abi=soft -march=armv7e-m -ggdb -O0 -"
+ 975      6D62202D 
+ 975      6D666C6F 
+ 975      61742D61 
+ 975      62693D73 
+ 976 0298 666F6D69 		.ascii	"fomit-frame-pointer -falign-functions=16 -ffunction"
+ 976      742D6672 
+ 976      616D652D 
+ 976      706F696E 
+ 976      74657220 
+ 977 02cb 2D736563 		.ascii	"-sections -fdata-sections -fno-common -flto\000"
+ 977      74696F6E 
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 21
+
+
+ 977      73202D66 
+ 977      64617461 
+ 977      2D736563 
+ 978              		.text
+ 979              		.section	.gnu.lto_.inline.71a40b94,"e",%progbits
+ 980 0000 789C7BC5 		.ascii	"x\234{\305\310\000\007\274\014\014,\015@\300\234\302"
+ 980      C80007BC 
+ 980      0C0C2C0D 
+ 980      40C09CC2 
+ 981 0010 C0C00467 		.ascii	"\300\300\004g\26104\002YuL\014L@%\214\014l@\316\001"
+ 981      B1303402 
+ 981      59754C0C 
+ 981      4C40258C 
+ 981      0C6C40CE 
+ 982 0025 A654A00A 		.ascii	"\246T\240\012\016\030\013E\005\023A3\230\011\252`!\250"
+ 982      0E180B45 
+ 982      05134133 
+ 982      9809AA60 
+ 982      21A8
+ 983 0037 8295A03B 		.ascii	"\202\225\240;\330\240f\244\001U0\201XL\030~\341\002"
+ 983      D8A066A4 
+ 983      01553081 
+ 983      584C187E 
+ 983      E102
+ 984 0049 799A9D81 		.ascii	"y\232\235\201\025(\264\000\217:&n\220:\016\342\3241"
+ 984      1528B400 
+ 984      8F3A266E 
+ 984      903A0EE2 
+ 984      D431
+ 985 005b 4EF0E324 		.ascii	"N\360\343$\322f.\242M\344&\322\215<D\252c\000\000\012"
+ 985      D2662EA2 
+ 985      4DE426D2 
+ 985      8D3C44AA 
+ 985      6300000A 
+ 986 006f 8864D9   		.ascii	"\210d\331"
+ 987              		.text
+ 988              		.section	.gnu.lto_.jmpfuncs.71a40b94,"e",%progbits
+ 989 0000 789C6362 		.ascii	"x\234cb@\006\000\000*\000\003"
+ 989      40060000 
+ 989      2A0003
+ 990              		.text
+ 991              		.section	.gnu.lto_.lto.71a40b94,"e",%progbits
+ 992 0000 09000400 		.ascii	"\011\000\004\000\001\000\000\000"
+ 992      01000000 
+ 993              		.text
+ 994              		.section	.gnu.lto_st_lld_get_counter.396.71a40b94,"e",%progbits
+ 995 0000 789C6550 		.ascii	"x\234eP\277KBQ\024>\347\235g\2644\370\027\024dCC>\265"
+ 995      BF4B4251 
+ 995      143EE79D 
+ 995      67B434F8 
+ 995      17146443 
+ 996 0017 A6960CA3 		.ascii	"\246\226\014\243\037d\223.\201 \246\222\222\360\304"
+ 996      1F64932E 
+ 996      8120A692 
+ 996      92F0C4
+ 997 0026 A7367AB5 		.ascii	"\2476z\265\\\\\374\265E\005\312#hrI\202j\220\034\232"
+ 997      5C5CFCB5 
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 22
+
+
+ 997      4505CA23 
+ 997      68724982 
+ 997      6A901C9A 
+ 998 003a 82687175 		.ascii	"\202hqu\024\212\022!\220\012^\367\251\221\320\307\275"
+ 998      148A1221 
+ 998      900A5EF7 
+ 998      A991D0C7 
+ 998      BD
+ 999 004b 70CE77BE 		.ascii	"p\316w\276s\316w\357\012\002D\001\300\302/\210\200\245"
+ 999      73CE77EF 
+ 999      0A024401 
+ 999      C0C22F88 
+ 999      80A5
+ 1000 005d 624E004D 		.ascii	"bN\000M\323R\242\200\345b\256Uk\256\3435\016\010\302"
+ 1000      D352A280 
+ 1000      E562AE55 
+ 1000      6BAEE335 
+ 1000      0E08C2
+ 1001 0070 B4380810 		.ascii	"\2648\010\020R\002a\012\313tJX\"\225\000\305Q\20483"
+ 1001      5202610A 
+ 1001      CB744A58 
+ 1001      229500C5 
+ 1001      51843833 
+ 1002 0084 DF60AC9F 		.ascii	"\337`\254\237=\351\327M\315\243\354\246J\002\234sA\035"
+ 1002      3DE9D74D 
+ 1002      CDA3ECA6 
+ 1002      4A029C73 
+ 1002      411D
+ 1003 0096 F10A6180 		.ascii	"\361\012a\200\011\320\031\016\236\343\\#\313\272\237"
+ 1003      09D0190E 
+ 1003      9EE35C23 
+ 1003      CBBA9F
+ 1004 00a5 F54E7B35 		.ascii	"\365N{5]b\370_]{64\330\267\226g\354\241\206\225\307"
+ 1004      5D62F85F 
+ 1004      5D7B3634 
+ 1004      D8B79667 
+ 1004      ECA18695 
+ 1005 00ba F79691AF 		.ascii	"\367\226\221\257W\211\010t-\344I7;\3004o(\220\360\227"
+ 1005      57890874 
+ 1005      2DE44937 
+ 1005      3BC0346F 
+ 1005      2890F097 
+ 1006 00ce 22BC61A6 		.ascii	"\"\274a\246\3271U\207\326\010\031\207\310\311\373\273"
+ 1006      D7315587 
+ 1006      D6081987 
+ 1006      C8C9FBBB 
+ 1007 00de CBA92AFD 		.ascii	"\313\251*\375\232'\004\036]\350\325\216I%\221\313\361"
+ 1007      9A27041E 
+ 1007      5DE8D58E 
+ 1007      492591CB 
+ 1007      F1
+ 1008 00ef 06C15261 		.ascii	"\006\301RalR%\003\336\342\031\015\215\027\210\306\246"
+ 1008      6C522503 
+ 1008      DEE2190D 
+ 1008      8D1788C6 
+ 1008      A6
+ 1009 0100 E32BA6ED 		.ascii	"\343+\246\3550\313\333\272_\365c&\012*M\214\036\246"
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 23
+
+
+ 1009      30CBDBBA 
+ 1009      5FF56326 
+ 1009      0A2A4D8C 
+ 1009      1EA6
+ 1010 0112 A38799F6 		.ascii	"\243\207\231\366\307\313\223\221\377\036\337\2453y\302"
+ 1010      C7CB9391 
+ 1010      FF1EDFA5 
+ 1010      3379C2
+ 1011 0121 71AF000B 		.ascii	"q\257\000\013\216e\217#\024\336\013\273\342\211@X\366"
+ 1011      8E658F23 
+ 1011      14DE0BBB 
+ 1011      E2894058 
+ 1011      F6
+ 1012 0132 1CCAB103 		.ascii	"\034\312\261\003%\352\363\007\275\011%\030\363l\004"
+ 1012      25EAF307 
+ 1012      BD092518 
+ 1012      F36C04
+ 1013 0141 95782216 		.ascii	"\225x\"\026t\312\373a\177r\011\354f\263\304\217_o\220"
+ 1013      74CAFB61 
+ 1013      7F7209EC 
+ 1013      66B3C48F 
+ 1013      5F6F90
+ 1014 0154 159BD56A 		.ascii	"\025\233\325j\225dE\012\371\"RT\216\305\025\311\345"
+ 1014      9564450A 
+ 1014      F9225254 
+ 1014      8EC515C9 
+ 1014      E5
+ 1015 0165 DE59B449 		.ascii	"\336Y\264IN\347\232\344\332u\271\267\034\333I\253^\365"
+ 1015      4EE79AE4 
+ 1015      DA75B9B7 
+ 1015      1CDB49AB 
+ 1015      5EF5
+ 1016 0177 2A716F24 		.ascii	"*qo$\0220\207\340\007\360t\250\222"
+ 1016      123087E0 
+ 1016      07F074A8 
+ 1016      92
+ 1017              		.text
+ 1018              		.section	.gnu.lto_st_lld_start_alarm.397.71a40b94,"e",%progbits
+ 1019 0000 789C7550 		.ascii	"x\234uPKh\023Q\024\275\347\335I\322\256\004\027\"XP"
+ 1019      4B681351 
+ 1019      14BDE7DD 
+ 1019      49D2AE04 
+ 1019      17225850 
+ 1020 0014 41100567 		.ascii	"A\020\005g:iq\341B\204\010\"\306U\272\021\002!\235\016"
+ 1020      3A6971E1 
+ 1020      42840822 
+ 1020      C655BA11 
+ 1020      02219D0E 
+ 1021 0028 66303235 		.ascii	"f025\223T\\\345\031\350F\301h\335\325\252\030\006\251"
+ 1021      93545CE5 
+ 1021      19E846C1 
+ 1021      68DDD5AA 
+ 1021      1806A9
+ 1022 003b 0B71A589 		.ascii	"\013q\245\211?Z\262V\020Ap\351F\324M\027Yu!\304\373"
+ 1022      3F5AB256 
+ 1022      104170E9 
+ 1022      46D44D17 
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 24
+
+
+ 1022      597521C4 
+ 1023 0050 260D7EC0 		.ascii	"&\015~\300\307\373\334{\336=\347\036\356S\020\335$\242"
+ 1023      C7FBDC7B 
+ 1023      DE3DE71E 
+ 1023      EE5310DD 
+ 1023      24A2
+ 1024 0062 83728809 		.ascii	"\203r\210\011+wn(\032\016\207MK\341\372!\274D\022\203"
+ 1024      2B776E28 
+ 1024      1A0E874D 
+ 1024      4BE1FA21 
+ 1024      BC441283 
+ 1025 0076 9A0A4DDC 		.ascii	"\232\012M\334\345#Z\353\355\345\325[\335\351\226^\336"
+ 1025      E5235AEB 
+ 1025      EDE5D55B 
+ 1025      DDE9965E 
+ 1025      DE
+ 1026 0087 1B33D103 		.ascii	"\0333\321\003\246\321Zc\254p\314\200\265\023)\034\220"
+ 1026      A6D15A63 
+ 1026      AC70CC80 
+ 1026      B513291C 
+ 1026      90
+ 1027 0098 88AFD0E1 		.ascii	"\210\257\320\341M\255?\374\350i=I13\272\020\016^\000"
+ 1027      4DAD3FFC 
+ 1027      E8693D49 
+ 1027      3133BA10 
+ 1027      0E5E00
+ 1028 00ab CFA5B700 		.ascii	"\317\245\267\000\327\276\246\211\322c%\301\350\331\307"
+ 1028      D7BEA689 
+ 1028      D26325C1 
+ 1028      E8D9C7
+ 1029 00ba D4A6FE39 		.ascii	"\324\246\3769lk\375\351\033\036v\255IH\235\245\314\305"
+ 1029      6C6BFDE9 
+ 1029      1B1E76AD 
+ 1029      49489DA5 
+ 1029      CCC5
+ 1030 00cc E64A013D 		.ascii	"\346J\001=\251k\263q\232\254\375\222\336f\365;\005m"
+ 1030      A96BB371 
+ 1030      9AACFD92 
+ 1030      DE66F53B 
+ 1030      056D
+ 1031 00de A135E8BD 		.ascii	"\2415\350\275\273w\2623rcA\254kK\340\376\352\223\251"
+ 1031      BB77B233 
+ 1031      726341AC 
+ 1031      6B4BE0FE 
+ 1031      EA93A9
+ 1032 00f1 B531686C 		.ascii	"\2651hl?6_\337w\305\234\222Z\274N\260\351GZO\304\234"
+ 1032      3F365FDF 
+ 1032      77C59C92 
+ 1032      5ABC4EB0 
+ 1032      E9475A4F 
+ 1033 0107 C61BDC37 		.ascii	"\306\033\3347\276\262\222\257\357\2119\203\267\300Q"
+ 1033      BEB292AF 
+ 1033      EF893983 
+ 1033      B7C051
+ 1034 0116 013A9C4A 		.ascii	"\001:\234JZl'-\024^\231\216\375\301\372\324?\202\312"
+ 1034      5A6C272D 
+ 1034      145E998E 
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 25
+
+
+ 1034      FDC1FAD4 
+ 1034      3F82CA
+ 1035 0129 08EEA865 		.ascii	"\010\356\250e\260!jb\325\364\316\310k\004>\277\337\327"
+ 1035      B0216A62 
+ 1035      D5F4CEC8 
+ 1035      6B043EBF 
+ 1035      DFD7
+ 1036 013b 91A9FC8F 		.ascii	"\221\251\374\217\317\177\361\373\302Wc\276\242\001Z"
+ 1036      CF7FF1FB 
+ 1036      C25763BE 
+ 1036      A2015A
+ 1037 014a 5F36B626 		.ascii	"_6\266&\222\371\267\031\177N\203\350X\356D1W\011\346"
+ 1037      92F9B719 
+ 1037      7F4E83E8 
+ 1037      58EE4431 
+ 1037      5709E6
+ 1038 015d 8342BDB1 		.ascii	"\203B\275\261\020\204\305\253a\355R\264X\366\374R#\362"
+ 1038      1084C5AB 
+ 1038      61ED52B4 
+ 1038      58F6FC52 
+ 1038      23F2
+ 1039 016f 6BC5337E 		.ascii	"k\3053~To\324\374|x1\360\226f\351\224m;\262=C\010\243"
+ 1039      546FD4FC 
+ 1039      7C7831F0 
+ 1039      9666E994 
+ 1039      6D3BB23D 
+ 1040 0186 ACEBBA4E 		.ascii	"\254\353\272N\0309\225r\325Y\014k\365\310)\314\235\237"
+ 1040      18399572 
+ 1040      D5590C6B 
+ 1040      F5C829CC 
+ 1040      9D9F
+ 1041 0198 C93AF9FC 		.ascii	"\311:\371\374i\247p\2410w6wn\3115\277\245\250^\252V"
+ 1041      69A770A1 
+ 1041      30773677 
+ 1041      6EC935BF 
+ 1041      A5A85EAA 
+ 1042 01ad 17EC0A65 		.ascii	"\027\354\012e\312\363Q=\270\354\357\036\241\266g\037"
+ 1042      CAF3513D 
+ 1042      B8ECEF1E 
+ 1042      A1B6671F 
+ 1043 01bd 9F7167CB 		.ascii	"\237qg\313\256\353\321/9!\303I"
+ 1043      AEEBD12F 
+ 1043      3921C349 
+ 1044              		.text
+ 1045              		.section	.gnu.lto_st_lld_stop_alarm.398.71a40b94,"e",%progbits
+ 1046 0000 789CBBC8 		.ascii	"x\234\273\310\300\300P\000\304\212@\314\300\314\300"
+ 1046      C0C05000 
+ 1046      C48A40CC 
+ 1046      C0CCC0
+ 1047 000f 38696217 		.ascii	"8ib\027\023\303\377\377\377\353Y\230\030\033U\030\267"
+ 1047      13C3FFFF 
+ 1047      FFEB5998 
+ 1047      181B5518 
+ 1047      B7
+ 1048 0020 3282D98C 		.ascii	"2\202\331\214\014\365L\214\365\214\223\2315\033\032"
+ 1048      0CF54C8C 
+ 1048      F58C9399 
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 26
+
+
+ 1048      351B1A
+ 1049 002f 1A7EB4CE 		.ascii	"\032~\264\316Z\267\335\240\251\241Ub\0113\003\303<f"
+ 1049      5AB7DDA0 
+ 1049      A9A15562 
+ 1049      093303C3 
+ 1049      3C66
+ 1050 0041 06186083 		.ascii	"\006\030`\203\361\030\201x\375%\326\003\015\177\376"
+ 1050      F1188178 
+ 1050      FD25D603 
+ 1050      0D7FFE
+ 1051 0050 F737343C 		.ascii	"\36774<}\312\270w;\013\320\214%\314@\211~f\220\361`"
+ 1051      7DCAB877 
+ 1051      3B0BD08C 
+ 1051      25CC4089 
+ 1051      7E6690F1 
+ 1052 0065 200FE44E 		.ascii	" \017\344N`fBp\031\031\33616}\372qg\266\335\"f\306I"
+ 1052      60664270 
+ 1052      1919DE31 
+ 1052      367DFA71 
+ 1052      67B6DD22 
+ 1053 007c CC40F58C 		.ascii	"\314@\365\214@\373\032X\200\302\207>\255\020\237\003"
+ 1053      40FB1A58 
+ 1053      80C2873E 
+ 1053      AD109F03 
+ 1054 008c 136400B2 		.ascii	"\023d\000\262\226\201\244^\360/af\002\252e\334\316\310"
+ 1054      9681A45E 
+ 1054      F02F6166 
+ 1054      02AA65DC 
+ 1054      CEC8
+ 1055 009e 60B0B0A1 		.ascii	"`\260\260\241\201c\01133\343\016\306\271 W\200\224\202"
+ 1055      81630933 
+ 1055      33E30EC6 
+ 1055      B9205780 
+ 1055      9482
+ 1056 00b0 2CFCC4D8 		.ascii	",\374\304\330\364\340\367;\016\260\013\373\231\031\221"
+ 1056      F4E0F73B 
+ 1056      0EB00BFB 
+ 1056      991991
+ 1057 00bf 2D6760D0 		.ascii	"-g`\320u\266\212q\316\310L\312\014.)M\311\314\217)\317"
+ 1057      75B68A71 
+ 1057      CEC84CCA 
+ 1057      0C2E294D 
+ 1057      C9CC8F29 
+ 1058 00d4 2FCA2E2E 		.ascii	"/\312..HLN\215/-N-\212qO-.)-J\365\311O\317L.3ap\320"
+ 1058      484C4E8D 
+ 1058      2F2D4E2D 
+ 1058      8A714F2D 
+ 1058      2E292D4A 
+ 1059 00f2 D3D307A2 		.ascii	"\323\323\007\242d\220\206\374b#CCC\375\374b\375\214"
+ 1059      649086FC 
+ 1059      62234343 
+ 1059      43FDFC62 
+ 1059      FD8C
+ 1060 0104 C41CFD82 		.ascii	"\304\034\375\202\374\242\222b\375\340\020_c#}\037\037"
+ 1060      FCA29262 
+ 1060      FDE0105F 
+ 1060      63237D1F 
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 27
+
+
+ 1060      1F
+ 1061 0115 17FDE0C8 		.ascii	"\027\375\340\310\340\020Og\3572C\220l|qI|NN\212^\006"
+ 1061      E0104F67 
+ 1061      EF324390 
+ 1061      6C7C7149 
+ 1061      7C4E4E8A 
+ 1062 012b 0300B2B7 		.ascii	"\003\000\262\267}U"
+ 1062      7D55
+ 1063              		.text
+ 1064              		.section	.gnu.lto_st_lld_set_alarm.399.71a40b94,"e",%progbits
+ 1065 0000 789C4D8F 		.ascii	"x\234M\217;H\303P\024\206\317\311I\253N\202\2038\010"
+ 1065      3B48C350 
+ 1065      1486CFC9 
+ 1065      49AB4E82 
+ 1065      833808
+ 1066 0013 3E1044C1 		.ascii	">\020D\301\304\324\342\340 B\005\021\353\024\027\241"
+ 1066      C4D4E2E0 
+ 1066      20420511 
+ 1066      EB1417A1 
+ 1067 0023 506A1A6C 		.ascii	"Pj\032l\260\022MR\305\251\327\202\213\016\365\261\371"
+ 1067      B0124D52 
+ 1067      C5A9D782 
+ 1067      8B0EF5B1 
+ 1067      F9
+ 1068 0034 0225884E 		.ascii	"\002%\210N\016\242\255\250P\005W\0217'\335t\020\005"
+ 1068      0EA2ADA8 
+ 1068      50055711 
+ 1068      3727DD74 
+ 1068      1005
+ 1069 0046 2707A1DE 		.ascii	"'\007\241\336\264\026=\334\013\347\377\316\343\376\267"
+ 1069      B4163DDC 
+ 1069      0BE7FFCE 
+ 1069      E3FEB7
+ 1070 0055 15015600 		.ascii	"\025\001V\000\240\205_ \300\365\265e\001\212\305bZ\024"
+ 1070      A0855F20 
+ 1070      C0F5B565 
+ 1070      018AC562 
+ 1070      5A14
+ 1071 0067 70B10DCF 		.ascii	"p\261\015\317\261\224#\244\005L\343\006u0\306\276\226"
+ 1071      B19423A4 
+ 1071      054CE306 
+ 1071      7530C6BE 
+ 1071      96
+ 1072 0078 36EF72DD 		.ascii	"6\357r\335\031\266\324\340\022\300.A9\266\011\327\311"
+ 1072      19B6D4E0 
+ 1072      12C02E41 
+ 1072      39B609D7 
+ 1072      C9
+ 1073 0089 2544F137 		.ascii	"%D\3617\023\260\231g4\013\355\005\306\356\237\362\214"
+ 1073      13B09967 
+ 1073      340BED05 
+ 1073      C6EE9FF2 
+ 1073      8C
+ 1074 009a D5804B84 		.ascii	"\325\200K\2049\3443x\206x\312\337\346`\341\332\017\340"
+ 1074      39E43378 
+ 1074      8678CADF 
+ 1074      E660E1DA 
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 28
+
+
+ 1074      0FE0
+ 1075 00ac AF6CE20C 		.ascii	"\257l\342\014\216\037|\005\366]\3142v\373\202\2179\321"
+ 1075      8E1F7C05 
+ 1075      F65DCC32 
+ 1075      76FB828F 
+ 1075      39D1
+ 1076 00be 87BC4FE4 		.ascii	"\207\274O\344\253\363\274\232%\317_)\232\270\\%\341"
+ 1076      ABF3BC9A 
+ 1076      25CF5F29 
+ 1076      9AB85C25 
+ 1076      E1
+ 1077 00cf 4F22BC63 		.ascii	"O\"\274c\3463\377\266\325\277_\366 \"7\314D\216o6\217"
+ 1077      E633FFB6 
+ 1077      D5BF5FF6 
+ 1077      202237CC 
+ 1077      448E6F36 
+ 1078 00e4 1AB72BD0 		.ascii	"\032\267+\3203{\340\225^k]\362\361^\274(\261\356=\306"
+ 1078      337BE095 
+ 1078      5E6B5DF2 
+ 1078      F15EBC28 
+ 1078      B1EE3DC6 
+ 1079 00f8 AA5DF2E3 		.ascii	"\252]\362\343%\356xn\002\\\037\326\273T\205W\210\235"
+ 1079      25EE786E 
+ 1079      025C1FD6 
+ 1079      BB548557 
+ 1079      889D
+ 1080 010a 1CEC13C1 		.ascii	"\034\354\023\301'f\236O>\252K\237\316\022\3767\003\320"
+ 1080      27669E4F 
+ 1080      3EAA4B9F 
+ 1080      CE12FE37 
+ 1080      03D0
+ 1081 011c 15EA8B84 		.ascii	"\025\352\213\204\022\306\204\241:\251\270aF\346Mk\312"
+ 1081      12C684A1 
+ 1081      3AA9B861 
+ 1081      46E64D6B 
+ 1081      CA
+ 1082 012d 9E89697A 		.ascii	"\236\211iz4e\353VdH\267\235\224\245\207\315IC\233\013"
+ 1082      3465EB56 
+ 1082      6448B79D 
+ 1082      94A587CD 
+ 1082      49439B0B 
+ 1083 0141 C28024C9 		.ascii	"\302\200$\311\374h\336\200i\007\024E\221M[N\304\222"
+ 1083      FC68DE80 
+ 1083      69071445 
+ 1083      914D5B4E 
+ 1083      C492
+ 1084 0153 F28C6939 		.ascii	"\362\214i9\266\254\216\215\366\004\344pxPV\307\325\261"
+ 1084      B6AC8E8D 
+ 1084      F604E470 
+ 1084      785056C7 
+ 1084      D5B1
+ 1085 0165 E1D0C89C 		.ascii	"\341\320\310\234\342U\243\266\023M&\343R\002\252b\023"
+ 1085      E255A3B6 
+ 1085      134D26E3 
+ 1085      5202AA62 
+ 1085      13
+ 1086 0176 B6634CEB 		.ascii	"\266cL\353ue*iRo\217\022\214)\212\006?\263\225\230\367"
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 29
+
+
+ 1086      75652A69 
+ 1086      526F8F12 
+ 1086      8C298A06 
+ 1086      3FB39598 
+ 1087              		.text
+ 1088              		.section	.gnu.lto_st_lld_get_alarm.400.71a40b94,"e",%progbits
+ 1089 0000 789C6550 		.ascii	"x\234eP1K#Q\020\236og\243\327X\370\013<0\"'\\\326\304"
+ 1089      314B2351 
+ 1089      109E6F67 
+ 1089      A3D758F8 
+ 1089      0B3C3022 
+ 1090 0018 ABAC9488 		.ascii	"\253\254\224\210\247\\\254\326F\010\004\215\301\004"
+ 1090      A75CACD6 
+ 1090      4608048D 
+ 1090      C104
+ 1091 0026 031BB289 		.ascii	"\003\033\262\211\226y\211\227\306&\032;Q\341d9\356*"
+ 1091      96798997 
+ 1091      C6261A3B 
+ 1091      51E16439 
+ 1091      EE2A
+ 1092 0038 1B8F8553 		.ascii	"\033\217\205S$h-\210\215Xig\220x\027\254,\204\370\336"
+ 1092      24682D88 
+ 1092      8D586967 
+ 1092      907817AC 
+ 1092      2C84F8DE 
+ 1093 004c 4651F0E3 		.ascii	"FQ\360\343=\230\371\346\2337\337<\023D\031\"\032\224"
+ 1093      3D98F9E6 
+ 1093      9B37DF3C 
+ 1093      13441922 
+ 1093      1A94
+ 1094 005e 97744275 		.ascii	"\227tBu}U\243V\253U\3205l\254\257\336\034\235\214\303"
+ 1094      7D55A356 
+ 1094      AB55D035 
+ 1094      6CACAFDE 
+ 1094      1C9D8CC3 
+ 1095 0072 8547308A 		.ascii	"\205G0\212\272\027\200\012\032\243\200\015\336bT\331"
+ 1095      BA17800A 
+ 1095      1AA3800D 
+ 1095      DE6254D9 
+ 1096 0082 6182FE1C 		.ascii	"a\202\376\034\001\037?\325\204x(o\336\272\376\223\225"
+ 1096      011F3FD5 
+ 1096      8478286F 
+ 1096      DEBAFE93 
+ 1096      95
+ 1097 0093 F284C31A 		.ascii	"\362\204\303\032\355H\301\037`\037\344\241\203\024#"
+ 1097      ED48C11F 
+ 1097      601FE4A1 
+ 1097      831423
+ 1098 00a2 2173F4D5 		.ascii	"!s\364\325\312\242\331p\353\327\243\305\252\300{\365"
+ 1098      CAA2D970 
+ 1098      EBD7A3C5 
+ 1098      AAC07BF5 
+ 1099 00b2 DEB9AF26 		.ascii	"\336\271\257&\036[\025!.\216P<u\257\272\345x\207\231"
+ 1099      1E5B1521 
+ 1099      2E8E503C 
+ 1099      75AFBAE5 
+ 1099      788799
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 30
+
+
+ 1100 00c5 4969A9C2 		.ascii	"Ii\251\302\312\254\207\036\331\260\306\332k\012\372"
+ 1100      CAAC871E 
+ 1100      D9B0C6DA 
+ 1100      6B0AFA
+ 1101 00d4 87D27DDD 		.ascii	"\207\322}\335\277\333\266\306\020\022\272$\217\317~"
+ 1101      BFDBB6C6 
+ 1101      1012BA24 
+ 1101      8FCF7E
+ 1102 00e3 77EDF28B 		.ascii	"w\355\362\213y\006\311\350\247\252\326\375\016\353R"
+ 1102      7906C9E8 
+ 1102      A7AAD6FD 
+ 1102      0EEB52
+ 1103 00f2 8EBF1E37 		.ascii	"\216\277\0367\370C\210\017\016\373p\200me8$\363_\375"
+ 1103      F843880F 
+ 1103      0EFB7080 
+ 1103      6D653824 
+ 1103      F35FFD
+ 1104 0105 0E77E010 		.ascii	"\016w\340\020\030h/\263\306\374f\"\032(\216P\257|\252"
+ 1104      18682FB3 
+ 1104      C6FC6622 
+ 1104      1A288E50 
+ 1104      AF7CAA
+ 1105 0118 79E77E17 		.ascii	"y\347~\027\272\346p\347\363\262\012\367(]_\376?\353"
+ 1105      BAE670E7 
+ 1105      F3B20AF7 
+ 1105      285D5FFE 
+ 1105      3FEB
+ 1106 012a 963F2AE7 		.ascii	"\226?*\347+\246\302x\353\237\350sx8\032N\246\346Rf."
+ 1106      2BA6C278 
+ 1106      EB9FE873 
+ 1106      78381A4E 
+ 1106      A6E65266 
+ 1107 013f 3F9FB2A2 		.ascii	"?\237\262\242\313Vv\321\316\314\306\023\261\274\235"
+ 1107      CB5676D1 
+ 1107      CECCC613 
+ 1107      B1BC9D
+ 1108 014e C846BF26 		.ascii	"\310F\277&\354\\>\233\210X\013\251\370\322\027\032\011"
+ 1108      EC5C3E9B 
+ 1108      88580BA9 
+ 1108      F8D2171A 
+ 1108      09
+ 1109 015f 040C79E2 		.ascii	"\004\014y\342\252\301\262C\301`\320\260l#9\23362V6g"
+ 1109      AAC1B243 
+ 1109      C160D0B0 
+ 1109      6C23399B 
+ 1109      36325636 
+ 1110 0174 1BE6F4D4 		.ascii	"\033\346\364\324P\310\210D\306\014s\306\234\236\014"
+ 1110      50C88844 
+ 1110      C60C73C6 
+ 1110      9C9E0C
+ 1111 0183 7F5B0AAA 		.ascii	"\177[\012\252j\314\316\305\322\351\371@\222\236\000"
+ 1111      6ACCCEC5 
+ 1111      D2E9F940 
+ 1111      929E00
+ 1112 0192 8E3FAD45 		.ascii	"\216?\255E"
+ 1113              		.text
+ 1114              		.section	.gnu.lto_st_lld_is_alarm_active.401.71a40b94,"e",%progbits
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 31
+
+
+ 1115 0000 789C5D50 		.ascii	"x\234]P1H\202Q\020\276{\367\0335\266\2655DCC\376\232"
+ 1115      31488251 
+ 1115      10BE7BF7 
+ 1115      1B35B6B5 
+ 1115      35444343 
+ 1116 0016 4D4D8551 		.ascii	"MM\205QD6\331\022\010R&)\011\277\370k\215>53l0\213\032"
+ 1116      4436D912 
+ 1116      08522629 
+ 1116      09BFF86B 
+ 1116      8D3E3533 
+ 1117 002e A2827E24 		.ascii	"\242\202~$\332\232\202\204\006\251!\227@\204hmhh\250"
+ 1117      DA9A8284 
+ 1117      06A92197 
+ 1117      4084686D 
+ 1117      6868A8
+ 1118 0041 08A786C0 		.ascii	"\010\247\206\300\356\375\025E\037\357\035w\337\335}"
+ 1118      EEFD1545 
+ 1118      1FEF1D77 
+ 1118      DFDD7D
+ 1119 0050 EFEECD21 		.ascii	"\357\356\315!@\034\000\\|A\003\334.\027\005\264\333"
+ 1119      401C005C 
+ 1119      7C4103DC 
+ 1119      2E1705B4 
+ 1119      DB
+ 1120 0061 EDB42670 		.ascii	"\355\264&p\247\\\274\257_O\3409\332\004aF\263\035\204"
+ 1120      A75CBCAF 
+ 1120      5F4FE039 
+ 1120      DA046146 
+ 1120      B31D84
+ 1121 0074 B4204CE3 		.ascii	"\264 L\343\016\015\324\244|\317\357oT]V.\337S!\200#"
+ 1121      0E0DD4A4 
+ 1121      7CCFEF6F 
+ 1121      545D562E 
+ 1121      DF532180 
+ 1122 0089 02F4A0AD 		.ascii	"\002\364\240\255\006\320a\307\014~\004\373ky\371V\254"
+ 1122      06D061C7 
+ 1122      0C7E04FB 
+ 1122      6B79F956 
+ 1122      AC
+ 1123 009a 3E35C632 		.ascii	">5\3062\353\022\377\327\2365\0355\371\321.IyS\307\362"
+ 1123      EB12FFD7 
+ 1123      9E351D35 
+ 1123      F9D12E49 
+ 1123      7953C7F2 
+ 1124 00ae EDD96377 		.ascii	"\355\331cw\007B\205P\260\021\244\214\003T\017\224H\215"
+ 1124      07428550 
+ 1124      B011A48C 
+ 1124      03540F94 
+ 1124      488D
+ 1125 00c0 67A39765 		.ascii	"g\243\227e\267H\374\206\010\257\230m\235\366Z\204\333"
+ 1125      B748FC86 
+ 1125      08AF986D 
+ 1125      9DF65A84 
+ 1125      DB
+ 1126 00d1 C4CD2819 		.ascii	"\304\315(\031\032\223W\227]\026\211\203\037\032\330"
+ 1126      1A935797 
+ 1126      5D168983 
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 32
+
+
+ 1126      1F1AD8
+ 1127 00e0 3B51C9CE 		.ascii	";Q\311\316\012\021\027\343\005\202\353\330\0165\254"
+ 1127      0A1117E3 
+ 1127      0582EBD8 
+ 1127      0E35AC
+ 1128 00ef E2A13DF3 		.ascii	"\342\241=\363+\346\366\012/\232\245*\204\352\023<\014"
+ 1128      2BE6F60A 
+ 1128      2F9AA52A 
+ 1128      84EA133C 
+ 1128      0C
+ 1129 0100 93CDC21D 		.ascii	"\223\315\302\035Z\344`\376\213T\265[D\177\246\300g\314"
+ 1129      5AE460FE 
+ 1129      8B54B55B 
+ 1129      447FA6C0 
+ 1129      67CC
+ 1130 0112 8C421FEB 		.ascii	"\214B\037\353\277mV\327\244&*\344\370\376\010\205\026"
+ 1130      BF6D56D7 
+ 1130      A4262AE4 
+ 1130      F8FE0885 
+ 1130      16
+ 1131 0123 661F765B 		.ascii	"f\037v[\215n\376W\326\001{'\374\273\023\300\240w$\340"
+ 1131      8D6EFE57 
+ 1131      D6017B27 
+ 1131      FCBB13C0 
+ 1131      A07724E0 
+ 1132 0137 8D4417A2 		.ascii	"\215D\027\242\376dj1j\004V\215\304\262\031\237\017\205"
+ 1132      FE646A31 
+ 1132      6A04568D 
+ 1132      C4B2199F 
+ 1132      0F85
+ 1133 0149 8329339C 		.ascii	"\203)3\234\010L\206\315d*\021\366\031K\321\320\3120"
+ 1133      084C86CD 
+ 1133      642A11F6 
+ 1133      194BD1D0 
+ 1133      CA30
+ 1134 015b 8C3A9D3A 		.ascii	"\214:\235:\237\220j0\314!\267\333\255\033\246\036\231"
+ 1134      9F906A30 
+ 1134      CC21B7DB 
+ 1134      AD1BA61E 
+ 1134      99
+ 1135 016c 8FE97123 		.ascii	"\217\351q#\2214u\377\354\214gH\367\371\306u\377\234"
+ 1135      913475FF 
+ 1135      EC8C6748 
+ 1135      F7F9C675 
+ 1135      FF9C
+ 1136 017e 7F76CA3B 		.ascii	"\177v\312;\275\342V\331\240\231\014\306b\213\316\010"
+ 1136      BDE256D9 
+ 1136      A0990CC6 
+ 1136      628BCE08 
+ 1137 018e 7C02DC87 		.ascii	"|\002\334\207\254?"
+ 1137      AC3F
+ 1138              		.text
+ 1139              		.section	.gnu.lto_stInit.402.71a40b94,"e",%progbits
+ 1140 0000 789CEB63 		.ascii	"x\234\353c``\010\003bE f`f`\2344\261\213\211\341\377"
+ 1140      60600803 
+ 1140      62452066 
+ 1140      6066609C 
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 33
+
+
+ 1140      34B18B89 
+ 1141 0016 FFFFF52C 		.ascii	"\377\377\365,L\214\215*\214[\031\301lF\206z&\306z\306"
+ 1141      4C8C8D2A 
+ 1141      8C5B19C1 
+ 1141      6C46867A 
+ 1141      26C67AC6 
+ 1142 002a C9CC9A0D 		.ascii	"\311\314\232\015\015\015?Zg\365\036flXq\200q\0113\003"
+ 1142      0D0D3F5A 
+ 1142      67F51E66 
+ 1142      6C587180 
+ 1142      71093303 
+ 1143 003e C33C6606 		.ascii	"\303<f\006\030`\203\361\030\201x\375%\326\003\015\177"
+ 1143      186083F1 
+ 1143      188178FD 
+ 1143      25D6030D 
+ 1143      7F
+ 1144 004f FEF73734 		.ascii	"\376\36774\334}\3048O\031(\336\317\0142\030\014\344"
+ 1144      DC7DC438 
+ 1144      4F1928DE 
+ 1144      CF0C3218 
+ 1144      0CE4
+ 1145 0061 812A2630 		.ascii	"\201*&03!\270\214\014\037\030\233\037\354>\306\310\320"
+ 1145      3321B88C 
+ 1145      0C1F189B 
+ 1145      1FEC3EC6 
+ 1145      C8D0
+ 1146 0073 C2C8B484 		.ascii	"\302\310\264\204\231q\0363P\305\022f&\206O\214M\017"
+ 1146      99711E33 
+ 1146      50C51266 
+ 1146      26864F8C 
+ 1146      4D0F
+ 1147 0085 F6BA818D 		.ascii	"\366\272\201\215\357gfD\326\317\300\240\353l\025\343"
+ 1147      EF676644 
+ 1147      D6CFC0A0 
+ 1147      EB6C15E3 
+ 1148 0095 9C919994 		.ascii	"\234\221\231\224\031\\R\232\222\231\037S\236_\224]\\"
+ 1148      195C529A 
+ 1148      92991F53 
+ 1148      9E5F945D 
+ 1148      5C
+ 1149 00a6 90989C1A 		.ascii	"\220\230\234\032_Z\234Z\024\343\236Z\\RZ\224\352\223"
+ 1149      5F5A9C5A 
+ 1149      14E39E5A 
+ 1149      5C525A94 
+ 1149      EA93
+ 1150 00b8 9F9E995C 		.ascii	"\237\236\231\\f\302\240\246\247\247\017D\311 \015\371"
+ 1150      66C2A0A6 
+ 1150      A7A70F44 
+ 1150      C9200DF9 
+ 1151 00c8 C5468686 		.ascii	"\305F\206\206\206\372\371\305\372\031\2119\372\305E"
+ 1151      86FAF9C5 
+ 1151      FA198939 
+ 1151      FAC545
+ 1152 00d7 C9203ABE 		.ascii	"\311 :\276\270D/\231\001\0008p_\234"
+ 1152      B8442F99 
+ 1152      01003870 
+ 1152      5F9C
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 34
+
+
+ 1153              		.text
+ 1154              		.section	.gnu.lto_stGetCounter.403.71a40b94,"e",%progbits
+ 1155 0000 789CFBCF 		.ascii	"x\234\373\317\300\300\020\006\304\006@\314\300\302\300"
+ 1155      C0C01006 
+ 1155      C40640CC 
+ 1155      C0C2C0
+ 1156 000f 38696217 		.ascii	"8ib\027\023\303\377\377\377\353Y\230\030'O\354:?w\013"
+ 1156      13C3FFFF 
+ 1156      FFEB5998 
+ 1156      18274FEC 
+ 1156      3A3F770B 
+ 1157 0023 0BE37646 		.ascii	"\013\343vF\260\0003c#\013\230\301\310P\317\304\314X"
+ 1157      B0003363 
+ 1157      230B98C1 
+ 1157      C850CFC4 
+ 1157      CC58
+ 1158 0035 CF389979 		.ascii	"\3178\231y\0163\343$\346%\314\014\214,P\026#\243\202"
+ 1158      0E33E324 
+ 1158      E625CC0C 
+ 1158      8C2C5016 
+ 1158      23A382
+ 1159 0048 E6818686 		.ascii	"\346\201\206\206\037\255\263\316?f\233\263\342\000\313"
+ 1159      1FADB3CE 
+ 1159      3F669BB3 
+ 1159      E200CB
+ 1160 0057 12662686 		.ascii	"\022f&\206y@\005[\031\031\26702\200\001\033\003H\004"
+ 1160      7940055B 
+ 1160      1919B730 
+ 1160      3280011B 
+ 1160      034804
+ 1161 006a 08807C46 		.ascii	"\010\200|F\325\003\255\015\037n\036n\353\023\231\320"
+ 1161      D503AD0D 
+ 1161      1F6E1E6E 
+ 1161      EB1399D0 
+ 1162 007a C881A978 		.ascii	"\310\201\251x\375%\326\003\015\177\376\36774\374\227"
+ 1162      FD25D603 
+ 1162      0D7FFEF7 
+ 1162      3734FC97 
+ 1163 008a D977E71B 		.ascii	"\331w\347\033\007\0133\003H\021C?3\310\221` \017T9\201"
+ 1163      070B3303 
+ 1163      4811433F 
+ 1163      33C89160 
+ 1163      200F5439 
+ 1164 009f 9909C165 		.ascii	"\231\011\301ed\370\300\330\254\260\210\231\271\205\221"
+ 1164      64F8C0D8 
+ 1164      ACB08899 
+ 1164      B98591
+ 1165 00ae 690933F3 		.ascii	"i\0113\363<f\240\202%\314,\014 e\314H\312\030\33706"
+ 1165      3C66A082 
+ 1165      25CC2C0C 
+ 1165      2065CC48 
+ 1165      CA18DF30 
+ 1166 00c3 3A302837 		.ascii	":0(744|\270\265\270A\201q\0113+\324a \360\211\261\351"
+ 1166      34347CB8 
+ 1166      B5B84181 
+ 1166      7109332B 
+ 1166      D46120F0 
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 35
+
+
+ 1167 00da C1E6F65E 		.ascii	"\301\346\366^F\240\357\201F\201D\372\231\031\221\355"
+ 1167      46A0EF81 
+ 1167      468144FA 
+ 1167      991991ED 
+ 1168 00ea 6460D075 		.ascii	"d`\320u\266\212q\316\310L\312\014.)M\311\314\217)\317"
+ 1168      B68A71CE 
+ 1168      C84CCA0C 
+ 1168      2E294DC9 
+ 1168      CC8F29CF 
+ 1169 00fe 2FCA2E2E 		.ascii	"/\312..HLN\215/-N-\212qO-.)-J\365\311O\317L.3aP\323"
+ 1169      484C4E8D 
+ 1169      2F2D4E2D 
+ 1169      8A714F2D 
+ 1169      2E292D4A 
+ 1170 011c D3D307A2 		.ascii	"\323\323\007\242d\220\206\374b#CCC\375\374b\375\214"
+ 1170      649086FC 
+ 1170      62234343 
+ 1170      43FDFC62 
+ 1170      FD8C
+ 1171 012e C41CFDE2 		.ascii	"\304\034\375\342\242d\020\035_\\\242\227\314\000\000"
+ 1171      A264101D 
+ 1171      5F5CA297 
+ 1171      CC0000
+ 1172 013d D75089A6 		.ascii	"\327P\211\246"
+ 1173              		.text
+ 1174              		.section	.gnu.lto_stStartAlarm.404.71a40b94,"e",%progbits
+ 1175 0000 789C4D50 		.ascii	"x\234MP1K\303`\020\275\227K\025W\377\200\202\2408\230"
+ 1175      314BC360 
+ 1175      10BD974B 
+ 1175      1557FF80 
+ 1175      82A03898 
+ 1176 0014 102D0EAE 		.ascii	"\020-\016\256\035\272\2709\270\024J\032\203\015*\321"
+ 1176      1DBAB839 
+ 1176      B8144A1A 
+ 1176      830D2AD1 
+ 1177 0024 7CA98EFD 		.ascii	"|\251\216\375\224\272\270T\333M\244\203d\350\346\244"
+ 1177      94BAB854 
+ 1177      DB4DA483 
+ 1177      64E8E6A4 
+ 1178 0034 D6412838 		.ascii	"\326A(8\270\212\253K\207\356\212 *\024\342\227h\261"
+ 1178      B88AAB4B 
+ 1178      87EE8A20 
+ 1178      2A14E297 
+ 1178      68B1
+ 1179 0046 C71DDF7B 		.ascii	"\307\035\337{\357\343\035\217\353\023\321\236\232\005"
+ 1179      EFE31D8F 
+ 1179      EB13D19E 
+ 1179      9A05
+ 1180 0054 35A4131A 		.ascii	"5\244\023\032g'\032\305q\\\32554\025\306\035R\3068\324"
+ 1180      67271AC5 
+ 1180      715CD535 
+ 1180      3415C61D 
+ 1180      52C638D4 
+ 1181 0068 5300AA6A 		.ascii	"S\000\252j\214*\232</\245\374:>\177}\200lw\0211Q\213"
+ 1181      8C2A9A3C 
+ 1181      2FA5FC3A 
+ 1181      3E7F7D80 
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 36
+
+
+ 1181      6C771131 
+ 1182 007e E9B72E18 		.ascii	"\351\267.\030\015\216\030\320\377\220\206i\205x\235"
+ 1182      0D8E18D0 
+ 1182      FF908669 
+ 1182      85789D
+ 1183 008d E6BA523E 		.ascii	"\346\272R>\335w\244\234\240\210\031\267P\036\334\000"
+ 1183      DD77A49C 
+ 1183      A08819B7 
+ 1183      501EDC00 
+ 1184 009d D7A04428 		.ascii	"\327\240D(\276d\210\306\206\233\224\2066\323\325s\246"
+ 1184      BE6488C6 
+ 1184      869B9486 
+ 1184      36D3D573 
+ 1184      A6
+ 1185 00ae 2B07715D 		.ascii	"+\007q]\312\217>\0063*\031:\352\253\316I\320\264\246"
+ 1185      CA8F3E06 
+ 1185      332A193A 
+ 1185      EAABCE49 
+ 1185      D0B4A6
+ 1186 00c1 52AAFD53 		.ascii	"R\252\375S\320)\363(}C\255\367\371\010\252A\213Xo\261"
+ 1186      D029F328 
+ 1186      7D43ADF7 
+ 1186      F908AA41 
+ 1186      8B586FB1 
+ 1187 00d5 325CB282 		.ascii	"2\\\262\202\031z\307Q\357;\237\306\2563F7\252\253\344"
+ 1187      197AC751 
+ 1187      EF3B9FC6 
+ 1187      AE334637 
+ 1187      AAABE4
+ 1188 00e8 560AB9B2 		.ascii	"V\012\271\262W\362\326\302\312\206\347\027\016\374`"
+ 1188      57F2D6C2 
+ 1188      CA86E717 
+ 1188      0EFC60
+ 1189 00f7 4BECDA8E 		.ascii	"K\354\332\216[\254\0107(\344]\021V\002w\325\337\364"
+ 1189      5BAC0837 
+ 1189      28E45D11 
+ 1189      560277D5 
+ 1189      DFF4
+ 1190 0109 9CFD2CCD 		.ascii	"\234\375,\315\032\206\251\332I\014\276X\264,\313\364"
+ 1190      1A86A9DA 
+ 1190      490CBE58 
+ 1190      B42CCBF4 
+ 1191 0119 8559B6B7 		.ascii	"\205Y\266\267M\0218\311[\024\241\341\320\270]\022\241"
+ 1191      4D1138C9 
+ 1191      5B14A1E1 
+ 1191      D0B85D12 
+ 1191      A1
+ 1192 012a B7E34E0E 		.ascii	"\267\343N\016\025cy\311\312\332\226\345\320\017\015"
+ 1192      156379C9 
+ 1192      CADA96E5 
+ 1192      D00F0D
+ 1193 0139 BC88E7   		.ascii	"\274\210\347"
+ 1194              		.text
+ 1195              		.section	.gnu.lto_stStopAlarm.405.71a40b94,"e",%progbits
+ 1196 0000 789CEB63 		.ascii	"x\234\353c``\010\003bE f`f`\2344\261\213\211\341\377"
+ 1196      60600803 
+ 1196      62452066 
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 37
+
+
+ 1196      6066609C 
+ 1196      34B18B89 
+ 1197 0016 FFFFF52C 		.ascii	"\377\377\365,L\214\215*\214[\031\301lF\206z&\306z\306"
+ 1197      4C8C8D2A 
+ 1197      8C5B19C1 
+ 1197      6C46867A 
+ 1197      26C67AC6 
+ 1198 002a C9CC9A0D 		.ascii	"\311\314\232\015\015\015?Zg\365\036elXq\200q\0113\003"
+ 1198      0D0D3F5A 
+ 1198      67F51E65 
+ 1198      6C587180 
+ 1198      71093303 
+ 1199 003e C33C6606 		.ascii	"\303<f\006\030`\203\361\030\201x\375%\326\003\015\177"
+ 1199      186083F1 
+ 1199      188178FD 
+ 1199      25D6030D 
+ 1199      7F
+ 1200 004f FEF73734 		.ascii	"\376\36774\034}\3148C\025(\336\317\0142\030\014\344"
+ 1200      1C7DCC38 
+ 1200      431528DE 
+ 1200      CF0C3218 
+ 1200      0CE4
+ 1201 0061 812A2630 		.ascii	"\201*&03!\270\214\014\037\030\233\037\314?\305\310\320"
+ 1201      3321B88C 
+ 1201      0C1F189B 
+ 1201      1FCC3FC5 
+ 1201      C8D0
+ 1202 0073 C2C8B484 		.ascii	"\302\310\264\204\231q\0363P\305\022f&\206O\214M\017"
+ 1202      99711E33 
+ 1202      50C51266 
+ 1202      26864F8C 
+ 1202      4D0F
+ 1203 0085 367A818D 		.ascii	"6z\201\215\357gfD\326\317\300\240\353l\025\343\234\221"
+ 1203      EF676644 
+ 1203      D6CFC0A0 
+ 1203      EB6C15E3 
+ 1203      9C91
+ 1204 0097 9994195C 		.ascii	"\231\224\031\\R\232\222\231\037S\236_\224]\\\220\230"
+ 1204      529A9299 
+ 1204      1F539E5F 
+ 1204      945D5C90 
+ 1204      98
+ 1205 00a8 9C1A5F5A 		.ascii	"\234\032_Z\234Z\024\343\236Z\\RZ\224\352\223\237\236"
+ 1205      9C5A14E3 
+ 1205      9E5A5C52 
+ 1205      5A94EA93 
+ 1205      9F9E
+ 1206 00ba 995C66C2 		.ascii	"\231\\f\302\240\246\247\247\017D\311 \015\371\305F\206"
+ 1206      A0A6A7A7 
+ 1206      0F44C920 
+ 1206      0DF9C546 
+ 1206      86
+ 1207 00cb 8686FAF9 		.ascii	"\206\206\372\371\305\372\031\2119\372\305E\311 :\276"
+ 1207      C5FA1989 
+ 1207      39FAC545 
+ 1207      C9203ABE 
+ 1208 00db B8442F99 		.ascii	"\270D/\231\001\000\030\003_c"
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 38
+
+
+ 1208      01001803 
+ 1208      5F63
+ 1209              		.text
+ 1210              		.section	.gnu.lto_stSetAlarm.406.71a40b94,"e",%progbits
+ 1211 0000 789C4D50 		.ascii	"x\234MP\261J\303P\024\275'7U\\\375\001]T\034L\210\026"
+ 1211      B14AC350 
+ 1211      14BD2737 
+ 1211      555CFD01 
+ 1211      5D541C4C 
+ 1212 0016 07D70E82 		.ascii	"\007\327\016\202\2709\270\024J\032\203\015*\321\274"
+ 1212      B839B814 
+ 1212      4A1A830D 
+ 1212      2AD1BC
+ 1213 0025 54C73EA5 		.ascii	"T\307>\245..\325v+\322A2\024\034\304A\255\270tqq\022"
+ 1213      2E2ED576 
+ 1213      2BD24132 
+ 1213      141CC441 
+ 1213      ADB87471 
+ 1214 003b 7FC00E75 		.ascii	"\177\300\016uW'\007!\276D\213\275\334\313;\347<\316"
+ 1214      57270721 
+ 1214      BE448BBD 
+ 1214      DCCB3BE7 
+ 1214      3CCE
+ 1215 004d E570FB44 		.ascii	"\345p\373D\264\247fN\015\351\204\372\331\211Fq\034W"
+ 1215      B4A7664E 
+ 1215      0DE984FA 
+ 1215      D9894671 
+ 1215      1C57
+ 1216 005f 740D0D85 		.ascii	"t\015\015\205q\217\2241\016\365\024\200*\032\243\202"
+ 1216      718F9431 
+ 1216      0EF51480 
+ 1216      2A1AA382 
+ 1217 006f 06CF4A29 		.ascii	"\006\317J)\277\216\233\227\217\220\355.\"&j1\375\326"
+ 1217      BF8E9B97 
+ 1217      8F90ED2E 
+ 1217      22266A31 
+ 1217      FDD6
+ 1218 0081 39A3CE11 		.ascii	"9\243\316\021\003\372\037\3220\251\020\257\323LW\312"
+ 1218      03FA1FD2 
+ 1218      30A910AF 
+ 1218      D34C57CA 
+ 1219 0091 E7878E94 		.ascii	"\347\207\216\224c\0241\343\016\312\203[\340\006\224"
+ 1219      631431E3 
+ 1219      0ECA835B 
+ 1219      E00694
+ 1220 00a0 0885EB0C 		.ascii	"\010\205\353\014\321\310`\223\322\320f\272z\311t\345"
+ 1220      D1C86093 
+ 1220      D2D066BA 
+ 1220      7AC974E5 
+ 1221 00b0 775C93F2 		.ascii	"w\\\223\362\255\217\316\224J\206\216\372\252q\0224\255"
+ 1221      AD8FCE94 
+ 1221      4A868EFA 
+ 1221      AA711234 
+ 1221      AD
+ 1222 00c1 89946AFF 		.ascii	"\211\224j\377\024t\312<L\337Q\355\275>\201\252\320\""
+ 1222      1474CA3C 
+ 1222      4CDF51ED 
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 39
+
+
+ 1222      BD3E81AA 
+ 1222      D022
+ 1223 00d3 D65BAC0C 		.ascii	"\326[\254\014\027\254`\206>q\324\373XIc\327\030\303"
+ 1223      17AC6086 
+ 1223      3E71D4FB 
+ 1223      584963D7 
+ 1223      18C3
+ 1224 00e5 1BD55572 		.ascii	"\033\325UrK\371\\\311+zkay\303\363\363\007~\260%vm\307"
+ 1224      4BF95CC9 
+ 1224      2B7A6B61 
+ 1224      79C3F3F3 
+ 1224      077EB025 
+ 1225 00fc 2D94851B 		.ascii	"-\224\205\033\344\227]\021\226\003w\325\337\364\234"
+ 1225      E4975D11 
+ 1225      960377D5 
+ 1225      DFF49C
+ 1226 010b FD2C4D1B 		.ascii	"\375,M\033\206\251\332I\014\276\230\267,\313\364\205"
+ 1226      86A9DA49 
+ 1226      0CBE98B7 
+ 1226      2CCBF485 
+ 1227 011b 59B2B74D 		.ascii	"Y\262\267M\0218\311[\020\241\341\320\250]\024\241\267"
+ 1227      1138C95B 
+ 1227      10A1E1D0 
+ 1227      A85D14A1 
+ 1227      B7
+ 1228 012c E38E0F14 		.ascii	"\343\216\017\024cq\301\312\332\226\345\320\0175A\210"
+ 1228      6371C1CA 
+ 1228      DA96E5D0 
+ 1228      0F354188 
+ 1229 013c 0D       		.ascii	"\015"
+ 1230              		.text
+ 1231              		.section	.gnu.lto_stGetAlarm.407.71a40b94,"e",%progbits
+ 1232 0000 789C6590 		.ascii	"x\234e\220=H\003A\020\205gv6AK\301\336\200(\010\232"
+ 1232      3D480341 
+ 1232      10856776 
+ 1232      36414BC1 
+ 1232      DE802808 
+ 1233 0015 23924A1B 		.ascii	"#\222J\033!\205\215\235`u\020\342y\230C\341\3446\321"
+ 1233      21858D9D 
+ 1233      607510E2 
+ 1233      799843E1 
+ 1233      E436D1
+ 1234 0028 321B3516 		.ascii	"2\0335\026\021\363k%!\202\234\220B\260\361\247\261\270"
+ 1234      11F36B25 
+ 1234      21829C90 
+ 1234      42B0F1A7 
+ 1234      B1B8
+ 1235 003a C6CA42B0 		.ascii	"\306\312B\260\262\323\306\316\"XY\010\347\356\0210\340"
+ 1235      B2D3C6CE 
+ 1235      22585908 
+ 1235      E7EE1130 
+ 1235      E0
+ 1236 004b 63979D6F 		.ascii	"c\227\235ox3<v\014\001\326\000`Q]\210\001\266\232U\006"
+ 1236      78333C76 
+ 1236      0C01D600 
+ 1236      60515D88 
+ 1236      01B69A55 
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 40
+
+
+ 1237 0060 61189638 		.ascii	"a\030\2268\303\266\252\361\036#\"<mV\303\253t\004\034"
+ 1237      C3B6AAF1 
+ 1237      1E23223C 
+ 1237      6D56C3AB 
+ 1237      74041C
+ 1238 0073 CB3C2A10 		.ascii	"\313<*\020J\2148\226\260M\035\302\026\371\004\310\007"
+ 1238      4A8C3896 
+ 1238      B04D1DC2 
+ 1238      16F904C8 
+ 1238      07
+ 1239 0084 15626226 		.ascii	"\025bb&\220\362\273r\366\364\021\357\364\002\356\023"
+ 1239      90F2BB72 
+ 1239      F6F411EF 
+ 1239      F402EE13 
+ 1240 0094 83AE32DC 		.ascii	"\203\2562\334\"\336 D\212\203\356()fSAE\366\237\037"
+ 1240      22DE2044 
+ 1240      8A83EE28 
+ 1240      29665341 
+ 1240      45F69F1F 
+ 1241 00a8 8F6AE38D 		.ascii	"\217j\343\215\362\310\177s\217\340\372%\026\310\237"
+ 1241      F2C87F73 
+ 1241      8FE0FA25 
+ 1241      16C89F
+ 1242 00b7 B02EE5DB 		.ascii	"\260.\345\333\354C\347n\224\023h\037\324IG\2164\201"
+ 1242      EC43E76E 
+ 1242      9413681F 
+ 1242      D449478E 
+ 1242      3481
+ 1243 00c9 1AD91F22 		.ascii	"\032\331\037\"4\210\206\261\217\007\211\013\242Cd>Q"
+ 1243      348886B1 
+ 1243      8F07890B 
+ 1243      A243643E 
+ 1243      51
+ 1244 00da 9794DF27 		.ascii	"\227\224\337'\256\3667\210\017\331\360\023\313K0)\245"
+ 1244      AEF63788 
+ 1244      0FD9F013 
+ 1244      CB4B3029 
+ 1244      A5
+ 1245 00eb ECBF5ECA 		.ascii	"\354\277^\312\004\372\024\033D\325\372\302\375\367\363"
+ 1245      04FA141B 
+ 1245      44D5FAC2 
+ 1245      FDF7F3
+ 1246 00fa E31354BF 		.ascii	"\343\023T\277\243V\351N\235p8\002\300\\f\301\314\344"
+ 1246      A356E94E 
+ 1246      9D703802 
+ 1246      C05C66C1 
+ 1246      CCE4
+ 1247 010c 9D7567B5 		.ascii	"\235ug\265P\334p\\s\317\365\266\304N\316\262\263Ea{"
+ 1247      50DC705C 
+ 1247      73CFF5B6 
+ 1247      C44ECEB2 
+ 1247      B345617B 
+ 1248 0120 E6B22D0A 		.ascii	"\346\262-\012E\317^q7\035k7\015\323\311\244\241\216"
+ 1248      45CF5E71 
+ 1248      371D6B37 
+ 1248      0DD3C9A4 
+ 1248      A18E
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 41
+
+
+ 1249 0132 A5075C31 		.ascii	"\245\007\\1\237J\245\014W\030\371\334\266!<K\277YQH"
+ 1249      9F4AA50C 
+ 1249      5718F9DC 
+ 1249      B6213C4B 
+ 1249      BF595148 
+ 1250 0146 5AF00BE8 		.ascii	"Z\360\013\350\214\226j"
+ 1250      8C966A
+ 1251              		.text
+ 1252              		.section	.gnu.lto_stIsAlarmActive.408.71a40b94,"e",%progbits
+ 1253 0000 789C7BCE 		.ascii	"x\234{\316\300\300\020\006\304\006@\314\300\302\300"
+ 1253      C0C01006 
+ 1253      C40640CC 
+ 1253      C0C2C0
+ 1254 000f 38696217 		.ascii	"8ib\027\023\303\377\377\377\353Y\230\030'O\354z\277"
+ 1254      13C3FFFF 
+ 1254      FFEB5998 
+ 1254      18274FEC 
+ 1254      7ABF
+ 1255 0021 6E0B0BE3 		.ascii	"n\013\013\343VF\260\0003c#\013\230\301\310P\317\304"
+ 1255      5646B000 
+ 1255      3363230B 
+ 1255      98C1C850 
+ 1255      CFC4
+ 1256 0033 CC58CF38 		.ascii	"\314X\3178\231Y\363@C\303\217\326Y\257\2172\316Zq\200"
+ 1256      9959F340 
+ 1256      43C38FD6 
+ 1256      59AF8F32 
+ 1256      CE5A7180 
+ 1257 0047 71093303 		.ascii	"q\0113\003\303<f\006FcF\260i\014\014l`>\0200\002\221"
+ 1257      C33C6606 
+ 1257      466346B0 
+ 1257      690C0C6C 
+ 1257      603E1030 
+ 1258 005d EA81D686 		.ascii	"\352\201\326\206\017o\217\266\365\212lh\340@W\272\376"
+ 1258      0F6F8FB6 
+ 1258      F58A6C68 
+ 1258      E04057BA 
+ 1258      FE
+ 1259 006e 12EB8186 		.ascii	"\022\353\201\206?\377\373\033\032\356\353\355\271\263"
+ 1259      3FFFFB1B 
+ 1259      1AEEEBED 
+ 1259      B9B3
+ 1260 007c 9B938599 		.ascii	"\233\223\205\231\001\244\204\241\237\031\344\0300\220"
+ 1260      01A484A1 
+ 1260      9F19E418 
+ 1260      3090
+ 1261 008a 071A3281 		.ascii	"\007\0322\201\231\011\301ed\370\300\330\254\260\210"
+ 1261      9909C165 
+ 1261      64F8C0D8 
+ 1261      ACB088
+ 1262 0099 99B98591 		.ascii	"\231\271\205\221i\0113\343<f\240\202%\314L\014 e\314"
+ 1262      690933E3 
+ 1262      3C66A082 
+ 1262      25CC4C0C 
+ 1262      2065CC
+ 1263 00ac 48CA18DF 		.ascii	"H\312\030\33706:0(744|x\267\264A\001\350Lf\250\263@"
+ 1263      30363A30 
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 42
+
+
+ 1263      28373434 
+ 1263      7C78B7B4 
+ 1263      4101E84C 
+ 1264 00c4 E01363D3 		.ascii	"\340\023c\323\203\333\335\275\214@_\002\215b\000\333"
+ 1264      83DBDDBD 
+ 1264      8C405F02 
+ 1264      8D6200DB 
+ 1265 00d4 C9886C27 		.ascii	"\311\210l'\003\203\256\263U\214sFfRfpIiJf~Ly~QvqAbr"
+ 1265      0383AEB3 
+ 1265      558C7346 
+ 1265      66526670 
+ 1265      49694A66 
+ 1266 00f2 6A7C6971 		.ascii	"j|iqjQ\214{jqIiQ\252O~zfr\231\011\203\232\236\236>\020"
+ 1266      6A518C7B 
+ 1266      6A714969 
+ 1266      51AA4F7E 
+ 1266      7A667299 
+ 1267 010d 258334E4 		.ascii	"%\2034\344\027\033\031\032\032\352\347\027\353g$\346"
+ 1267      171B191A 
+ 1267      1AEAE717 
+ 1267      EB6724E6 
+ 1268 011d E8171725 		.ascii	"\350\027\027%\203\350\370\342\022\275d\006\000\227\214"
+ 1268      83E8F8E2 
+ 1268      12BD6406 
+ 1268      00978C
+ 1269 012c 83E0     		.ascii	"\203\340"
+ 1270              		.text
+ 1271              		.section	.gnu.lto_.symbol_nodes.71a40b94,"e",%progbits
+ 1272 0000 789C7DD0 		.ascii	"x\234}\320\313\011\002A\020\204\341\232\251\325}\032"
+ 1272      CB090241 
+ 1272      1084E19A 
+ 1272      A9D57D1A 
+ 1273 0010 83874D40 		.ascii	"\203\207M@0\300\232\271\373X\337\032\214\206`J\312\202"
+ 1273      30C09AB9 
+ 1273      FB58DF1A 
+ 1273      8C86604A 
+ 1273      CA82
+ 1274 0022 428BD075 		.ascii	"B\213\320u\373\351\357\324\313\010 \256(\274>\233\207"
+ 1274      FBE9EFD4 
+ 1274      CB0820AE 
+ 1274      28BC3E9B 
+ 1274      87
+ 1275 0033 E10908B8 		.ascii	"\341\011\010\270\247\234\027\010\030\027\327T\360\305"
+ 1275      A79C1708 
+ 1275      1817D754 
+ 1275      F0C5
+ 1276 0041 868ABED8 		.ascii	"\206\212\276\330R\364\305@\025\276\330Q\023_\354\251"
+ 1276      52F4C540 
+ 1276      15BED851 
+ 1276      135FECA9 
+ 1277 0051 E99F78E4 		.ascii	"\351\237x\344\034\276\340@\225.8R\225\013NT\355\202"
+ 1277      1CBEE040 
+ 1277      952E3852 
+ 1277      950B4E54 
+ 1277      ED82
+ 1278 0063 33D5B8E0 		.ascii	"3\325\270\340B\265.\270R\235\007\302\215\232\375\002"
+ 1278      42B52EB8 
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 43
+
+
+ 1278      529D07C2 
+ 1278      8D9AFD02 
+ 1279 0073 20A5345E 		.ascii	" \2454^95\227\236%lU\301V\035m5\264\325\026\266:\363"
+ 1279      3935979E 
+ 1279      256C55C1 
+ 1279      561D6D35 
+ 1279      B4D516B6 
+ 1280 0089 F61E6F6E 		.ascii	"\366\036onS\361."
+ 1280      53F12E
+ 1281              		.text
+ 1282              		.section	.gnu.lto_.refs.71a40b94,"e",%progbits
+ 1283 0000 789C6364 		.ascii	"x\234cd\000\002\000\000\012\000\002"
+ 1283      00020000 
+ 1283      0A0002
+ 1284              		.text
+ 1285              		.section	.gnu.lto_.decls.71a40b94,"e",%progbits
+ 1286 0000 789CB556 		.ascii	"x\234\265Vkp\024U\026\276\347\336\236G:\201d1\256[e"
+ 1286      6B701455 
+ 1286      16BEE7DE 
+ 1286      9E473A81 
+ 1286      6431AE5B 
+ 1287 0015 959BB254 		.ascii	"\225\233\262T\362\307\204\031X\254rk\335\340\020YJ@"
+ 1287      F2C78419 
+ 1287      58AC726B 
+ 1287      DDE01059 
+ 1287      4A40
+ 1288 0027 6AC23EB4 		.ascii	"j\302>\264\264f\2633\263$%0\331\314\300\356\376kHH\""
+ 1288      B466B333 
+ 1288      B3242530 
+ 1288      D9CCC0EE 
+ 1288      FE6B4848 
+ 1289 003c 0A64790B 		.ascii	"\012dy\013\010A\001\203\012\206\227\021\021\011\211"
+ 1289      08410183 
+ 1289      0A869711 
+ 1289      110989
+ 1290 004b 21811008 		.ascii	"!\201\020\010$Hx\030\023y\015\341aTP$Q\366\334\333="
+ 1290      24487818 
+ 1290      13790DE1 
+ 1290      61545024 
+ 1290      51F6DCDB 
+ 1291 0060 B7E7B516 		.ascii	"\267\347\265\026\177\266k\316\364\275\267\277\363\235"
+ 1291      7FB66BCE 
+ 1291      F4BDB7BF 
+ 1291      F39D
+ 1292 006e EF9CFBE8 		.ascii	"\357\234\373\350\376.\235\220vJ\310FF\310]\274\206\023"
+ 1292      FE2E9D90 
+ 1292      764AC846 
+ 1292      46C85DBC 
+ 1292      8613
+ 1293 0080 428E13F3 		.ascii	"B\216\023\363\342\375F\264\203h\207\320\332\320\332"
+ 1293      E2FD46B4 
+ 1293      836887D0 
+ 1293      DAD0DA
+ 1294 008f D1BAD03E 		.ascii	"\321\272\320>C\353F;\203v\016\255\007\255\027\355K\264"
+ 1294      43EB463B 
+ 1294      83760EAD 
+ 1294      07AD17ED 
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 44
+
+
+ 1294      4BB4
+ 1295 00a1 0B24F19A 		.ascii	"\013$\361\232\017\204\330\360>\002-\023\255\001\355"
+ 1295      0F84D8F0 
+ 1295      3E022D13 
+ 1295      AD01ED
+ 1296 00b0 291CFB1D 		.ascii	")\034\373\035\332\025l\027\241a\223<\011\372\2751\011"
+ 1296      DA156C17 
+ 1296      A161933C 
+ 1296      09FABD31 
+ 1296      09
+ 1297 00c1 C7427C60 		.ascii	"\307B|`7\260\311x\206\031\\\230\016y\004\333\017\243"
+ 1297      37B0C978 
+ 1297      86195C98 
+ 1297      0E7904DB 
+ 1297      0FA3
+ 1298 00d3 FDC6E03B 		.ascii	"\375\306\340;\230\204o)>P\014\276h-\034\037\361;\224"
+ 1298      98846F29 
+ 1298      3E500CBE 
+ 1298      682D1C1F 
+ 1298      F13B94
+ 1299 00e6 C46FE53D 		.ascii	"\304o\345=\352\000C\007\030\265\213\277\326\030<?\307"
+ 1299      EA004307 
+ 1299      18B58BBF 
+ 1299      D6183C3F 
+ 1299      C7
+ 1300 00f7 5114C7D3 		.ascii	"Q\024\307\323\236\204g\013>\260\342\375\204\341?\222"
+ 1300      9E84670B 
+ 1300      3EB0E2FD 
+ 1300      84E13F92 
+ 1301 0107 24D63592 		.ascii	"$\3265\222OW\022\377\255\240\327\214c\177\217\355Vc"
+ 1301      4F5712FF 
+ 1301      ADA0D78C 
+ 1301      637F8FED 
+ 1301      5663
+ 1302 0119 1C978698 		.ascii	"\034\227\206\230\347d\363\271\335\210\031\255=\017\307"
+ 1302      E764F3B9 
+ 1302      DD8819AD 
+ 1302      3D0FC7
+ 1303 0128 0E183C11 		.ascii	"\016\030<\021\177\276F\222\315\345n\303?\276\206\343"
+ 1303      7FBE4692 
+ 1303      CDE56EC3 
+ 1303      3FBE86E3 
+ 1304 0138 70BC39CA 		.ascii	"p\2749\312\237\257\257\203F\016\317A,\307\236\237\321"
+ 1304      9FAFAF83 
+ 1304      460ECF41 
+ 1304      2CC79E9F 
+ 1304      D1
+ 1305 0149 CDD764B2 		.ascii	"\315\327d\262\271\333w\217q\371zn3\342\3769.\356\201"
+ 1305      B9DB778F 
+ 1305      71F97A6E 
+ 1305      33E2FE39 
+ 1305      2EEE81
+ 1306 015c 7BCCBD97 		.ascii	"{\314\275\227\350\363\305\335\237\217\343h6\326\036"
+ 1306      E8F3C5DD 
+ 1306      9F8FE368 
+ 1306      36D61E
+ 1307 016b 9FB317B0 		.ascii	"\237\263\027\260\335\031\347\313\367Q\262\271Z\303\350"
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 45
+
+
+ 1307      DD19E7CB 
+ 1307      F751B2B9 
+ 1307      5AC3E8
+ 1308 017a C5AE9E16 		.ascii	"\305\256\236\026\365\242\316\247\370\000\240{,\376\251"
+ 1308      F5A2CEA7 
+ 1308      F800A07B 
+ 1308      2CFEA9
+ 1309 0189 E4054632 		.ascii	"\344\005F25\252Q\253\217Q\225\251\314\247\266\302C\331"
+ 1309      35AA51AB 
+ 1309      8F5195A9 
+ 1309      CCA7B6C2 
+ 1309      43D9
+ 1310 019b 37599E9D 		.ascii	"7Y\236\235f\247\253\366\332&\310P-vJ\3036\237\232}\007"
+ 1310      66A7ABF6 
+ 1310      DA26C850 
+ 1310      2D764AC3 
+ 1310      369F9A7D 
+ 1311 01b0 DEA335D6 		.ascii	"\336\2435\326\254<M\361\275v\177\330\246\321\352)\231"
+ 1311      AC3C4DF1 
+ 1311      BD767FD8 
+ 1311      A6D1EA29 
+ 1311      99
+ 1312 01c1 A3F3F03F 		.ascii	"\243\363\360?lk\005\037zMU\354\031\330\012\333\324\233"
+ 1312      6C6B051F 
+ 1312      7A4D55EC 
+ 1312      19D80ADB 
+ 1312      D49B
+ 1313 01d3 AC66A1D5 		.ascii	"\254f\241\325\327N\253FB+\250>g\246\246iyv\373C\351"
+ 1313      D74EAB46 
+ 1313      422BA83E 
+ 1313      67A6A669 
+ 1313      7976FB43 
+ 1314 01e8 8DAC913D 		.ascii	"\215\254\221=\203K\330^\267\355~5lKG\212l_V\206/+\275"
+ 1314      834BD85E 
+ 1314      B7ED7E35 
+ 1314      6C4B478A 
+ 1314      6C5F5686 
+ 1315 01ff 152C3E9F 		.ascii	"\025,>\237\232\231MP\204\317\351\314\243*2+\366Vp2H"
+ 1315      9A994D50 
+ 1315      84CFE9CC 
+ 1315      A32A322B 
+ 1315      F6567032 
+ 1316 0214 736A7D57 		.ascii	"sj}W\037P-j\312CY\331\204\370\3103\024y\331\335\310"
+ 1316      1F502D6A 
+ 1316      CA4359D9 
+ 1316      84F8C833 
+ 1316      1479D9DD 
+ 1317 0229 05368CE9 		.ascii	"\0056\214\3513\273\000\331*uR\366l\030\317\017J\263"
+ 1317      33BB00D9 
+ 1317      2A7552F6 
+ 1317      6C18CF0F 
+ 1317      4AB3
+ 1318 023b 08D1147B 		.ascii	"\010\321\024{Z\032hxK\361<\353\233\352TI\330F\361Q\246"
+ 1318      5A1A6878 
+ 1318      4BF13CEB 
+ 1318      9BEA5449 
+ 1318      D846F151 
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 46
+
+
+ 1319 0250 021A05D3 		.ascii	"\002\032\005\323S\265b\351\251^7\261\374c\346\200wL"
+ 1319      53B562E9 
+ 1319      A95E37B1 
+ 1319      FC63E680 
+ 1319      774C
+ 1320 0262 2C319F53 		.ascii	",1\237S\210<\326qq3gp\211q\220\374\021\007\323-\212"
+ 1320      883CD671 
+ 1320      71336770 
+ 1320      897190FC 
+ 1320      1107D32D 
+ 1321 0277 1CE2DC81 		.ascii	"\034\342\334\201_\374?\332\301\324(\343S)\013LH\234"
+ 1321      5FFC3FDA 
+ 1321      C1D428E3 
+ 1321      53290B4C 
+ 1321      489C
+ 1322 0289 70C10211 		.ascii	"p\301\002\021A\211\027\213,\233\003K\317VZ.a\331\264"
+ 1322      4189178B 
+ 1322      2C9B034B 
+ 1322      CF565A2E 
+ 1322      61D9B4
+ 1323 029c 5599707F 		.ascii	"U\231p\177u\036\001\366 a9$W\023\327\274\227\011\324"
+ 1323      751E01F6 
+ 1323      20613924 
+ 1323      5713D7BC 
+ 1323      9709D4
+ 1324 02af EB0C2FA5 		.ascii	"\353\014/\245.a0\002(\376gB\006\376\217\024EM\027-\302"
+ 1324      2E613002 
+ 1324      28FE6742 
+ 1324      06FE8F14 
+ 1324      454D172D 
+ 1325 02c4 4A8878AC 		.ascii	"J\210x\254\210\307Y\310\274\263l\335\3224\265A\323\006"
+ 1325      88C759C8 
+ 1325      BCB36CDD 
+ 1325      D234B541 
+ 1325      D306
+ 1326 02d6 B486F214 		.ascii	"\264\206\362\024\002\373\001>AE\373\000\341\037\002"
+ 1326      02FB013E 
+ 1326      4145FB00 
+ 1326      E11F02
+ 1327 02e5 7C0CB017 		.ascii	"|\014\260\027\020v\347t\371\240\355\001\014uM\3232\241"
+ 1327      1076E774 
+ 1327      F9A0ED01 
+ 1327      0C754DD3 
+ 1327      32A1
+ 1328 02f7 01E02300 		.ascii	"\001\340#\000\276\205\001\367\023\004\360\270\256\256"
+ 1328      BE8501F7 
+ 1328      1304F0B8 
+ 1328      AEAE
+ 1329 0305 D66EDFAA 		.ascii	"\326n\337\252\2746\357\251\325\337\014h\232\232\202"
+ 1329      BC36EFA9 
+ 1329      D5DF0C68 
+ 1329      9A9A82
+ 1330 0314 0FE00340 		.ascii	"\017\340\003@\012\221\371\007\210\332\015\260\013^\372"
+ 1330      0A91F907 
+ 1330      88DA0DB0 
+ 1330      0B5EFA
+ 1331 0323 D6CAAE00 		.ascii	"\326\312\256\000O\351\333\345\337_g|\027q\266\000\016"
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 47
+
+
+ 1331      4FE9DBE5 
+ 1331      DF5F677C 
+ 1331      1771B600 
+ 1331      0E
+ 1332 0334 AC9877E8 		.ascii	"\254\230w\350V\252\014Q$#\340n\203OA\0171\260\250\276"
+ 1332      56AA0C51 
+ 1332      2423E06E 
+ 1332      834F410F 
+ 1332      31B0A8BE 
+ 1333 0348 AE0FB405 		.ascii	"\256\017\264\005\210\032\201\017\240IFh\222\021\272"
+ 1333      881A810F 
+ 1333      A0494668 
+ 1333      9211BA
+ 1334 0357 AD6C4844 		.ascii	"\255lHD\250\334\273\250MMB\330jJ\256\333V_R\213\210"
+ 1334      A8DCBBA8 
+ 1334      4D4D42D8 
+ 1334      6A4AAEDB 
+ 1334      565F528B 
+ 1335 036c 3FE020B4 		.ascii	"?\340 \264H\262\026Iv\314\312\026Q\035z4\002\305\270"
+ 1335      48B21649 
+ 1335      76CCCA16 
+ 1335      511D7A34 
+ 1335      02C5B8
+ 1336 037f 8725F4B0 		.ascii	"\207%\364\260\204\356\262\262\365:t\240\277\376\202"
+ 1336      84EEB2B2 
+ 1336      F53A74A0 
+ 1336      BFFE82
+ 1337 038e 54897538 		.ascii	"T\211u8\"\321G$\372m+\253\243\204\265PTj\375h\301\256"
+ 1337      22D14724 
+ 1337      FA6D2BAB 
+ 1337      A384B550 
+ 1337      546AFD68 
+ 1338 03a4 B7940701 		.ascii	"\267\224\007\001\360\227B\341\004\314\303\375\2017\234"
+ 1338      F09742E1 
+ 1338      04CCC3FD 
+ 1338      81379C
+ 1339 03b3 95B0569E 		.ascii	"\225\260V\236F`4\214\"p\014p\210@\007\300q>#\233\033"
+ 1339      4660348C 
+ 1339      22700C70 
+ 1339      884007C0 
+ 1339      713E239B 
+ 1340 03c8 D6F482CC 		.ascii	"\326\364\202\314\356\2049#\235fz\003U{\314ru\002\034"
+ 1340      EE843923 
+ 1340      9D667A03 
+ 1340      557BCC72 
+ 1340      75021C
+ 1341 03db 95428E4A 		.ascii	"\225B\216J!\253\255\254\235\213\240ot\356\250P\036^"
+ 1341      21ABADAC 
+ 1341      9D8BA06F 
+ 1341      74EEA850 
+ 1341      1E5E
+ 1342 03ed 85F3D8BD 		.ascii	"\205\363\330\275ba\023\254\325\032P\006\352\300\312"
+ 1342      626113AC 
+ 1342      D51A5006 
+ 1342      EAC0CA
+ 1343 03fc 9C947E27 		.ascii	"\234\224~'\245\337\022+\033\024~G\327t\034\267p\277"
+ 1343      A5DF122B 
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 48
+
+
+ 1343      1B147E47 
+ 1343      D7741CB7 
+ 1343      70BF
+ 1344 040e 8163E72B 		.ascii	"\201c\347+\206w\360\365\010<\353S\322\351\224t\252\260"
+ 1344      8677F0F5 
+ 1344      083CEB53 
+ 1344      D2E99474 
+ 1344      AAB0
+ 1345 0420 B22AC69D 		.ascii	"\262*\306\235>\031:\323\227\"\234\276j\372\007/k\036"
+ 1345      3E193AD3 
+ 1345      97229CBE 
+ 1345      6AFA072F 
+ 1345      6B1E
+ 1346 0432 2FEB69E9 		.ascii	"/\353i\351r\332\234\001\013[.\\\312\252W\014Y\271K\335"
+ 1346      72DA9C01 
+ 1346      0B5B2E5C 
+ 1346      CAAA570C 
+ 1346      59B94BDD 
+ 1347 0446 C2F9955A 		.ascii	"\302\371\225Z\206\024wV:\235\225N-\026\266A8\035|s~"
+ 1347      86147756 
+ 1347      3A9D954E 
+ 1347      2D16B641 
+ 1347      381D7C73 
+ 1348 045b E570E1F4 		.ascii	"\345p\341\364\256\351\204\221>\227N\237K\247M\026\366"
+ 1348      AEE98491 
+ 1348      3E974E9F 
+ 1348      4BA74D16 
+ 1348      F6
+ 1349 046c 9E70EA3A 		.ascii	"\236p\352:W\177\223\012qm\027\2433\372B:}!\235\276S"
+ 1349      577F930A 
+ 1349      716D17A3 
+ 1349      33FA423A 
+ 1349      7D219DBE 
+ 1350 0481 58BD709A 		.ascii	"X\275p\232\337\275n\235*\234\2566\033\031a\305\373\244"
+ 1350      DFBD6E9D 
+ 1350      2A9CAE36 
+ 1350      1B1961C5 
+ 1350      FBA4
+ 1351 0493 4B9F74E9 		.ascii	"K\237t\351WX\213pYtm\371\376\264\207Wi\332\355\272W"
+ 1351      57588B70 
+ 1351      59746DF9 
+ 1351      FEB48757 
+ 1351      69DAEDBA 
+ 1352 04a8 DB77671D 		.ascii	"\333wg\035(\253\311\346\011\235\227>\347\305M\354\330"
+ 1352      28ABC9E6 
+ 1352      099D973E 
+ 1352      E7C54DEC 
+ 1352      D8
+ 1353 04b9 5E9BB875 		.ascii	"^\233\270u\333X'#\354\224\360\257h\270\334aW{\343\367"
+ 1353      DB582723 
+ 1353      EC94F0AF 
+ 1353      68B8DC61 
+ 1353      577BE3F7 
+ 1354 04cd 6E387AEF 		.ascii	"n8z\357\012\257\260\3161`\025\333^{\202\3652}\344,_"
+ 1354      0AAFB0CE 
+ 1354      316015DB 
+ 1354      5E7B82F5 
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 49
+
+
+ 1354      327DE42C 
+ 1355 04e2 496B6FB4 		.ascii	"Iko\264\264\332T\315\240\301Q\235\207\300WH\226\013"
+ 1355      B4DA54CD 
+ 1355      A0C1519D 
+ 1355      87C05748 
+ 1355      960B
+ 1356 04f4 3738E65A 		.ascii	"78\346Z\363\225#\303\022\217\211p\3341Q\366\365\226"
+ 1356      F39523C3 
+ 1356      128F8970 
+ 1356      DC3151F6 
+ 1356      F596
+ 1357 0506 D3CA08A4 		.ascii	"\323\312\010\244*\327\264\032\012\003\000\327\000\256"
+ 1357      2AD7B41A 
+ 1357      0A0300D7 
+ 1357      00AE
+ 1358 0514 72AEAF41 		.ascii	"r\256\257A\360q\331\247\256\356\230\007&\350J\"\210"
+ 1358      F071D9A7 
+ 1358      AEEE9807 
+ 1358      26E84A22 
+ 1358      88
+ 1359 0525 F51BFA7A 		.ascii	"\365\033\372z\011\273\216\351~mt\273\011\273\205\335"
+ 1359      09BB8EE9 
+ 1359      7E6D74BB 
+ 1359      09BB85DD 
+ 1360 0535 41A3DB41 		.ascii	"A\243\333A\330]\354\226+z\267U\277\331E\222\015\204"
+ 1360      D85DEC96 
+ 1360      2B7AB755 
+ 1360      BFD94592 
+ 1360      0D84
+ 1361 0547 2D5078B4 		.ascii	"-Px\264\3357\206\352,\311\262\233Kyv\243\020\262ko["
+ 1361      DD3786EA 
+ 1361      2CC9B29B 
+ 1361      4B7976A3 
+ 1361      10B26B6F 
+ 1362 055c 2D8D518D 		.ascii	"-\215Q\215G\363O\0343\217\012\034\347\251\335x\325\033"
+ 1362      47F34F1C 
+ 1362      338F0A1C 
+ 1362      E7A9DD78 
+ 1362      D51B
+ 1363 056e 233A1E23 		.ascii	"#:\036#\202c\330\305\206\234Q\342?C/9\260e\3060C\256"
+ 1363      8263D8C5 
+ 1363      869C51E2 
+ 1363      3F432F39 
+ 1363      B065C630 
+ 1364 0584 A5FD83EF 		.ascii	"\245\375\203\357\247%\323\364\252\320\264\200\"f\333"
+ 1364      A725D3F4 
+ 1364      AAD0B480 
+ 1364      2266DB
+ 1365 0593 EAB3AF40 		.ascii	"\352\263\257@\214\250*\012\225\030\007^\243\002\310"
+ 1365      8CA82A0A 
+ 1365      9518075E 
+ 1365      A302C8
+ 1366 05a2 45D57455 		.ascii	"E\325tU\355M\215Q\025\017b\253\214\270\331l\255BX\215"
+ 1366      ED4D8D51 
+ 1366      150F62AB 
+ 1366      8CB8D96C 
+ 1366      AD42588D 
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 50
+
+
+ 1367 05b6 D1CB621B 		.ascii	"\321\313b\033\261Wk\364~\305\266bo'\332\036\264}h\015"
+ 1367      B1576BF4 
+ 1367      7EC5B662 
+ 1367      6F27DA1E 
+ 1367      B47D680D 
+ 1368 05ca 68CD6887 		.ascii	"h\315h\207\321\216\032\250\0136\221K\315S\354\004\257"
+ 1368      D18E1AA8 
+ 1368      0B36914B 
+ 1368      CD53EC04 
+ 1368      AF
+ 1369 05db ECD895E7 		.ascii	"\354\330\225\347v\364\244=\222x\335g\334\373pa\367\\"
+ 1369      76F4A43D 
+ 1369      9278DD67 
+ 1369      DCFB7061 
+ 1369      F75C
+ 1370 05ed 1AB8FB68 		.ascii	"\032\270\373hS\231\326\212\207<\252[Fa\027\225\331."
+ 1370      5399D68A 
+ 1370      873CAA5B 
+ 1370      46611795 
+ 1370      D92E
+ 1371 05ff E1421D04 		.ascii	"\341B\035\004qu\203\213qw\226\247q\314\3531\230J\023"
+ 1371      7175838B 
+ 1371      717796A7 
+ 1371      71CCEB31 
+ 1371      984A13
+ 1372 0612 33646256 		.ascii	"3dbV%b\366\003\331\200\240\327\266+<\326B\012\257\010"
+ 1372      2562F603 
+ 1372      D980A0D7 
+ 1372      B62B3CD6 
+ 1372      420AAF08 
+ 1373 0626 4CA41E15 		.ascii	"L\244\036\025\006\206\023\275\276\275\304\3203\010\321"
+ 1373      068613BD 
+ 1373      BEBDC4D0 
+ 1373      3308D1
+ 1374 0635 3C77C0E4 		.ascii	"<w\300\344Y\257\363|\003p]`\"K\264\037L\236\037LAkb"
+ 1374      59AFF37C 
+ 1374      03705D60 
+ 1374      224BB41F 
+ 1374      4C9E1F4C 
+ 1375 064c 048975A1 		.ascii	"\004\211u\241\213^+c}\027\023\353\246\011yCBn%B\214"
+ 1375      8B5E2B63 
+ 1375      7D1713EB 
+ 1375      A6097943 
+ 1375      426E2542 
+ 1376 0661 500B2566 		.ascii	"P\013%f~L\244\362\250\264VK\314\0171<\337\233\241~2"
+ 1376      7E4CA4F2 
+ 1376      A8B4564B 
+ 1376      CC0F313C 
+ 1376      DF9BA17E 
+ 1377 0676 15AF88E1 		.ascii	"\025\257\210\341Y\036\305\363\212\344\371O\014f\261"
+ 1377      591EC5F3 
+ 1377      8AE4F94F 
+ 1377      0C66B1
+ 1378 0685 39155F99 		.ascii	"9\025_\231<o\304`r\005\204\027p\261^\3002\312\277\353"
+ 1378      3C6FC460 
+ 1378      72058417 
+ 1378      70B15EC0 
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 51
+
+
+ 1378      32CABFEB 
+ 1379 0699 1011D92E 		.ascii	"\020\021\331.?\232jn\233,k\023X\0141\253\244\230\241"
+ 1379      3F9A6A6E 
+ 1379      9B2C6B13 
+ 1379      580C31AB 
+ 1379      A498A1
+ 1380 06ac C4B9D269 		.ascii	"\304\271\322i~4iV&&\245c^\2254\213b \025:D\337A\270"
+ 1380      7E346956 
+ 1380      2626A563 
+ 1380      5E95348B 
+ 1380      6220153A 
+ 1381 06c4 E8613D85 		.ascii	"\350a=\205u|\0141x\256m\243PG\341m\012\273)\274I\341"
+ 1381      757C0C31 
+ 1381      78AE6DA3 
+ 1381      5047E16D 
+ 1381      0ABB29BC 
+ 1382 06da 2D0A3B28 		.ascii	"-\012;(~|\303\006\012\037Q\330J\241\236\302N\012\033"
+ 1382      7E7CC306 
+ 1382      0A1F51D8 
+ 1382      4AA19EC2 
+ 1382      4E0A1B
+ 1383 06ed 29BC43E1 		.ascii	")\274C\341}\012\333)l\242\360.\205\017(\324R\330Ba/"
+ 1383      7D0ADB29 
+ 1383      6CA2F02E 
+ 1383      850F28D4 
+ 1383      52D84261 
+ 1384 0702 85CD4845 		.ascii	"\205\315HEa\017\377\330\344R\356\230rW'\256\032#\355"
+ 1384      610FFFD8 
+ 1384      E452EE98 
+ 1384      725727AE 
+ 1384      1A23ED
+ 1385 0715 3552EFED 		.ascii	"5R\357\355\304\27140\013$\246:q\236\014L\255\304\\\216"
+ 1385      C4B93430 
+ 1385      0B24A63A 
+ 1385      719E0C4C 
+ 1385      ADC45C8E 
+ 1386 0729 E1B914C5 		.ascii	"\341\271\024\305\263Ebjbx.\232%\256\222\220\245\211"
+ 1386      B345626A 
+ 1386      62782E9A 
+ 1386      25AE9290 
+ 1386      A589
+ 1387 073b 3BD8A059 		.ascii	";\330\240Y'1\337\306\204\352\327i\330R\013?\261V\266"
+ 1387      2731DFC6 
+ 1387      84EAD769 
+ 1387      D8520B3F 
+ 1387      B156B6
+ 1388 074e F70CA5DF 		.ascii	"\367\014\245\337\027_o\370\230\376\237*\316O\333\262"
+ 1388      175F6FF8 
+ 1388      98FE9F2A 
+ 1388      CE4FDBB2 
+ 1389 075e 2B27589A 		.ascii	"+'X\232xw\3254*\260\317\224\366\211~\212\036>W7h7\001"
+ 1389      7877D534 
+ 1389      2AB0CF94 
+ 1389      F6897E8A 
+ 1389      1E3E5737 
+ 1390 0775 F80A8E00 		.ascii	"\370\012\216\000\366\353\200\366\315_\336\032n\002\016"
+ 1390      F6EB80F6 
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 52
+
+
+ 1390      CD5FDE1A 
+ 1390      6E020E
+ 1391 0784 9880061D 		.ascii	"\230\200\006\035\320\266\373H\3770\023\320l\002\016"
+ 1391      D0B6FB48 
+ 1391      FF3013D0 
+ 1391      6C020E
+ 1392 0793 F03378BD 		.ascii	"\3603x\275E?A\207\211\0034L\330;\306@\032\372\236?\267"
+ 1392      453F4187 
+ 1392      8903344C 
+ 1392      D83BC640 
+ 1392      1AFA9E3F 
+ 1393 07a8 7D6DD2D7 		.ascii	"}m\322\327o\213x\031\034\244l'\257\234\365\307\256\223"
+ 1393      6F8B7819 
+ 1393      1CA46C27 
+ 1393      AF9CF5C7 
+ 1393      AE93
+ 1394 07ba 1D3655FF 		.ascii	"\0356U\377J\024_\206\215s\231\361i\330J\341\020\202"
+ 1394      4A145F86 
+ 1394      8D7399F1 
+ 1394      69D84AE1 
+ 1394      1082
+ 1395 07cc 0F5368A3 		.ascii	"\017Sh\243"
+ 1396 07d0 BC899F39 		.ascii	"\274\211\2379C\277\306;\262\037\333\270\250#\305xC\374"
+ 1396      43BFC63B 
+ 1396      B21FDBB8 
+ 1396      A823C578 
+ 1396      43FC
+ 1397 07e2 1587E053 		.ascii	"\025\207\340S\012M|\326\216P\021A\274E~\352\330\222"
+ 1397      0A4D7CD6 
+ 1397      8E501141 
+ 1397      BC457EEA 
+ 1397      D892
+ 1398 07f4 CA5FEEE1 		.ascii	"\312_\356\341\206\344\234\2109\273\262\257R\225<\355"
+ 1398      86E49C88 
+ 1398      39BBB2AF 
+ 1398      52953CED 
+ 1399 0804 893C8F2E 		.ascii	"\211<\217.\023_\216?x\347\3264\314\315\202\243\024\232"
+ 1399      135F8E3F 
+ 1399      78E7D634 
+ 1399      CCCD82A3 
+ 1399      149A
+ 1400 0816 299C0189 		.ascii	")\234\001\211k\2440\353\245\313\026\366\241\221z\252"
+ 1400      6BA430EB 
+ 1400      A5CB16F6 
+ 1400      A1917AAA 
+ 1401 0826 A845B7DE 		.ascii	"\250E\267\336Q1\302\276\315m\325\303\222\325\241K\324"
+ 1401      5131C2BE 
+ 1401      CD6DD5C3 
+ 1401      92D5A14B 
+ 1401      D4
+ 1402 0837 A193AB98 		.ascii	"\241\223\253\230\273\355\306r\032\235\315\011\012\307"
+ 1402      BBEDC672 
+ 1402      1A9DCD09 
+ 1402      0AC7
+ 1403 0845 39FB492A 		.ascii	"9\373I*p<\233C\355\313\226\244D+\215\307p\245u[7iU\031"
+ 1403      703C9B43 
+ 1403      EDCB96A4 
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 53
+
+
+ 1403      442B8DC7 
+ 1403      70A5755B 
+ 1404 085d A8F333A1 		.ascii	"\250\3633\241\263\007$\252\203\353\334gaM\026\035\330"
+ 1404      B30724AA 
+ 1404      83EBDC67 
+ 1404      614D161D 
+ 1404      D8
+ 1405 086e 1E03EC35 		.ascii	"\036\003\3545\201\335\034Xa\301\210\313z\276\250P\314"
+ 1405      81DD1C58 
+ 1405      61C188CB 
+ 1405      7ABEA850 
+ 1405      CC
+ 1406 087f D9EF3467 		.ascii	"\331\3574g\377\014_\202\3141\226\244\024\226\316\234"
+ 1406      FF0C5F82 
+ 1406      CC3196A4 
+ 1406      1496CE9C 
+ 1407 088f F384FFF1 		.ascii	"\363\204\377\361\231D\365\006JC\376\177=>s\014\031\021"
+ 1407      9944F506 
+ 1407      4A43FE7F 
+ 1407      3D3E730C 
+ 1407      1911
+ 1408 08a1 0C7966CC 		.ascii	"\014yf\314\360y\246\373C\036o`\366\254\220\277\364\321"
+ 1408      F079A6FB 
+ 1408      431E6F60 
+ 1408      F6AC90BF 
+ 1408      F4D1
+ 1409 08b3 9C9C5CFC 		.ascii	"\234\234\\\374y\213\212\377V\034\010:\035\016Gn \230"
+ 1409      798B8AFF 
+ 1409      561C083A 
+ 1409      1D0E476E 
+ 1409      2098
+ 1410 08c5 5B543823 		.ascii	"[T8#7X\352\345wO0\224\343\265O\230\362\307,\227\343"
+ 1410      3758EAE5 
+ 1410      774F3094 
+ 1410      E3B54F98 
+ 1410      F2C72C97 
+ 1411 08da 09322232 		.ascii	"\0112\"2\2223v\264cL\241\303\341%)\301\177\007C\305"
+ 1411      923376B4 
+ 1411      634CA1C3 
+ 1411      E12529C1 
+ 1411      7F0743C5 
+ 1412 08ee 33FD9ED0 		.ascii	"3\375\236\320\343\256'_tq\242\202\320l_q\340\305\177"
+ 1412      E3AE275F 
+ 1412      7471A282 
+ 1412      D06C5F71 
+ 1412      E0C57F
+ 1413 0901 064A5F0E 		.ascii	"\006J_\016\226\024z\375\236\331A\177\351\213\023\374"
+ 1413      96147AFD 
+ 1413      9ED9417F 
+ 1413      E98B13FC 
+ 1414 0911 C1D0EC52 		.ascii	"\301\320\354R\377\244\300\364b\357\2341$\357\177F.A"
+ 1414      FFA4C0F4 
+ 1414      62EF9C31 
+ 1414      24EF7F46 
+ 1414      2E41
+ 1415 0923 C1C1DC82 		.ascii	"\301\301\334\202i\223G;s'M\032\237[\360|\301\264\211"
+ 1415      6993473B 
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 54
+
+
+ 1415      73274D1A 
+ 1415      9F5BF07C 
+ 1415      C1B489
+ 1416 0936 AE67E738 		.ascii	"\256g\3478\014=<\207\234\"\231M0TX\032\362\024\316\300"
+ 1416      0C3D3C87 
+ 1416      9C22994D 
+ 1416      3054581A 
+ 1416      F214CEC0 
+ 1417 094a 8C7F2187 		.ascii	"\214\177!\207\002%\372HFd\304\037\212\035\230\036\031"
+ 1417      0225FA48 
+ 1417      4664C41F 
+ 1417      8A1D981E 
+ 1417      19
+ 1418 095b F8A53150 		.ascii	"\370\2451P\034\324\373\236Bo\250x\216\337\342y:\020"
+ 1418      1CD4FB9E 
+ 1418      426FA878 
+ 1418      8EDFE279 
+ 1418      3A10
+ 1419 096d 98610D86 		.ascii	"\230a\015\206&\316*\016=vOU\"i\301\320\004\177\310\245"
+ 1419      26CE2A0E 
+ 1419      3D764F55 
+ 1419      2269C1D0 
+ 1419      047FC8A5 
+ 1420 0981 57163B05 		.ascii	"W\026;\005\\\3318N\232\312;\201\022\321V\261\355\017"
+ 1420      5CD9384E 
+ 1420      9ACA3B81 
+ 1420      12D156B1 
+ 1420      ED0F
+ 1421 0993 459A138C 		.ascii	"E\232\023\214f:F\012\212\3268\021?5\"\013\303\263\361"
+ 1421      663A460A 
+ 1421      8AD63811 
+ 1421      3F35220B 
+ 1421      C3B3F1
+ 1422 09a6 2EB77D76 		.ascii	".\267}v\361\254\320h\247'\224\342\316/\310w\377)\177"
+ 1422      F1ACD068 
+ 1422      A72794E2 
+ 1422      CE2FC877 
+ 1422      FF297F
+ 1423 09b9 FC28FA9C 		.ascii	"\374(\372\234\233\215{\306\211\346\260L\233X\220?\211"
+ 1423      9B8D7BC6 
+ 1423      89E6B04C 
+ 1423      9B58903F 
+ 1423      89
+ 1424 09ca E5BBDCCA 		.ascii	"\345\273\334\312\370in\247\305\345\232\354\036\255\270"
+ 1424      F8696EA7 
+ 1424      C5E59AEC 
+ 1424      1EADB8
+ 1425 09d9 5C7F712B 		.ascii	"\\\177q+O\343\000s\271\334\314\2156\316\355fS\013\\"
+ 1425      4FE30073 
+ 1425      B9DCCC8D 
+ 1425      36CEED66 
+ 1425      530B5C
+ 1426 09ec CC35651A 		.ascii	"\3145e\032>\315w\013\240\016w\260\374\011nZ\200\004"
+ 1426      3ECD770B 
+ 1426      A00E77B0 
+ 1426      FC096E5A 
+ 1426      8004
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 55
+
+
+ 1427 09fe 13F3DD4A 		.ascii	"\023\363\335J\301dD\273\334N4\2072~\3628\367o\357y\272"
+ 1427      C16444BB 
+ 1427      DC4E3487 
+ 1427      327EF238 
+ 1427      F76FEF79 
+ 1428 0a13 A64D9C8C 		.ascii	"\246M\234\214S\025\014\315\344j\213g\342L\245\312\216"
+ 1428      53150CCD 
+ 1428      E46A8B67 
+ 1428      E24CA5CA 
+ 1428      8E
+ 1429 0a24 27A47A3C 		.ascii	"'\244z<\177\237=\313\353\361\3448\355\221\246\342-*"
+ 1429      7F9F3DCB 
+ 1429      EBF1E438 
+ 1429      ED91A6E2 
+ 1429      2D2A
+ 1430 0a36 2C351F38 		.ascii	",5\0378\314\346\250\377\002\036\271\270\023"
+ 1430      CCE6A8FF 
+ 1430      021EB9B8 
+ 1430      13
+ 1431              		.text
+ 1432              		.section	.gnu.lto_.symtab.71a40b94,"e",%progbits
+ 1433 0000 7374496E 		.ascii	"stInit\000"
+ 1433      697400
+ 1434 0007 00       		.ascii	"\000"
+ 1435 0008 00       		.ascii	"\000"
+ 1436 0009 00       		.ascii	"\000"
+ 1437 000a 00000000 		.ascii	"\000\000\000\000\000\000\000\000"
+ 1437      00000000 
+ 1438 0012 D6000000 		.ascii	"\326\000\000\000"
+ 1439 0016 73744765 		.ascii	"stGetCounter\000"
+ 1439      74436F75 
+ 1439      6E746572 
+ 1439      00
+ 1440 0023 00       		.ascii	"\000"
+ 1441 0024 00       		.ascii	"\000"
+ 1442 0025 00       		.ascii	"\000"
+ 1443 0026 00000000 		.ascii	"\000\000\000\000\000\000\000\000"
+ 1443      00000000 
+ 1444 002e D8000000 		.ascii	"\330\000\000\000"
+ 1445 0032 73745374 		.ascii	"stStartAlarm\000"
+ 1445      61727441 
+ 1445      6C61726D 
+ 1445      00
+ 1446 003f 00       		.ascii	"\000"
+ 1447 0040 00       		.ascii	"\000"
+ 1448 0041 00       		.ascii	"\000"
+ 1449 0042 00000000 		.ascii	"\000\000\000\000\000\000\000\000"
+ 1449      00000000 
+ 1450 004a DA000000 		.ascii	"\332\000\000\000"
+ 1451 004e 73745374 		.ascii	"stStopAlarm\000"
+ 1451      6F70416C 
+ 1451      61726D00 
+ 1452 005a 00       		.ascii	"\000"
+ 1453 005b 00       		.ascii	"\000"
+ 1454 005c 00       		.ascii	"\000"
+ 1455 005d 00000000 		.ascii	"\000\000\000\000\000\000\000\000"
+ 1455      00000000 
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 56
+
+
+ 1456 0065 DC000000 		.ascii	"\334\000\000\000"
+ 1457 0069 73745365 		.ascii	"stSetAlarm\000"
+ 1457      74416C61 
+ 1457      726D00
+ 1458 0074 00       		.ascii	"\000"
+ 1459 0075 00       		.ascii	"\000"
+ 1460 0076 00       		.ascii	"\000"
+ 1461 0077 00000000 		.ascii	"\000\000\000\000\000\000\000\000"
+ 1461      00000000 
+ 1462 007f DE000000 		.ascii	"\336\000\000\000"
+ 1463 0083 73744765 		.ascii	"stGetAlarm\000"
+ 1463      74416C61 
+ 1463      726D00
+ 1464 008e 00       		.ascii	"\000"
+ 1465 008f 00       		.ascii	"\000"
+ 1466 0090 00       		.ascii	"\000"
+ 1467 0091 00000000 		.ascii	"\000\000\000\000\000\000\000\000"
+ 1467      00000000 
+ 1468 0099 E0000000 		.ascii	"\340\000\000\000"
+ 1469 009d 73744973 		.ascii	"stIsAlarmActive\000"
+ 1469      416C6172 
+ 1469      6D416374 
+ 1469      69766500 
+ 1470 00ad 00       		.ascii	"\000"
+ 1471 00ae 00       		.ascii	"\000"
+ 1472 00af 00       		.ascii	"\000"
+ 1473 00b0 00000000 		.ascii	"\000\000\000\000\000\000\000\000"
+ 1473      00000000 
+ 1474 00b8 E2000000 		.ascii	"\342\000\000\000"
+ 1475 00bc 73745F6C 		.ascii	"st_lld_init\000"
+ 1475      6C645F69 
+ 1475      6E697400 
+ 1476 00c8 00       		.ascii	"\000"
+ 1477 00c9 02       		.ascii	"\002"
+ 1478 00ca 00       		.ascii	"\000"
+ 1479 00cb 00000000 		.ascii	"\000\000\000\000\000\000\000\000"
+ 1479      00000000 
+ 1480 00d3 E4000000 		.ascii	"\344\000\000\000"
+ 1481              		.text
+ 1482              		.section	.gnu.lto_.ext_symtab.71a40b94,"e",%progbits
+ 1483 0000 01       		.ascii	"\001"
+ 1484 0001 01       		.ascii	"\001"
+ 1485 0002 00       		.ascii	"\000"
+ 1486 0003 01       		.ascii	"\001"
+ 1487 0004 00       		.ascii	"\000"
+ 1488 0005 01       		.ascii	"\001"
+ 1489 0006 00       		.ascii	"\000"
+ 1490 0007 01       		.ascii	"\001"
+ 1491 0008 00       		.ascii	"\000"
+ 1492 0009 01       		.ascii	"\001"
+ 1493 000a 00       		.ascii	"\000"
+ 1494 000b 01       		.ascii	"\001"
+ 1495 000c 00       		.ascii	"\000"
+ 1496 000d 01       		.ascii	"\001"
+ 1497 000e 00       		.ascii	"\000"
+ 1498 000f 01       		.ascii	"\001"
+ 1499 0010 00       		.ascii	"\000"
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 57
+
+
+ 1500              		.text
+ 1501              		.section	.gnu.lto_.opts,"e",%progbits
+ 1502 0000 272D666E 		.ascii	"'-fno-openmp' '-fno-openacc' '-fno-pie' '-fcf-prote"
+ 1502      6F2D6F70 
+ 1502      656E6D70 
+ 1502      2720272D 
+ 1502      666E6F2D 
+ 1503 0033 6374696F 		.ascii	"ction=none' '-g' '-mcpu=cortex-m4' '-mthumb' '-mflo"
+ 1503      6E3D6E6F 
+ 1503      6E652720 
+ 1503      272D6727 
+ 1503      20272D6D 
+ 1504 0066 61742D61 		.ascii	"at-abi=soft' '-mlibarch=armv7e-m' '-march=armv7e-m'"
+ 1504      62693D73 
+ 1504      6F667427 
+ 1504      20272D6D 
+ 1504      6C696261 
+ 1505 0099 20272D4F 		.ascii	" '-O0' '-fomit-frame-pointer' '-falign-functions=16"
+ 1505      30272027 
+ 1505      2D666F6D 
+ 1505      69742D66 
+ 1505      72616D65 
+ 1506 00cc 2720272D 		.ascii	"' '-ffunction-sections' '-fdata-sections' '-fno-com"
+ 1506      6666756E 
+ 1506      6374696F 
+ 1506      6E2D7365 
+ 1506      6374696F 
+ 1507 00ff 6D6F6E27 		.ascii	"mon' '-flto' '-Xassembler' '-alms=./build/lst/hal_s"
+ 1507      20272D66 
+ 1507      6C746F27 
+ 1507      20272D58 
+ 1507      61737365 
+ 1508 0132 742E6C73 		.ascii	"t.lst'\000"
+ 1508      742700
+ 1509              		.text
+ 1510              		.comm	__gnu_lto_slim,1,1
+ 1511              		.ident	"GCC: (GNU Arm Embedded Toolchain 10.3-2021.10) 10.3.1 20210824 (release)"
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s 			page 58
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 hal_st.c
+C:\Users\nello\AppData\Local\Temp\ccs8s0Gc.s:24     .gnu.debuglto_.debug_info:00000000 hal_st.c.6314a11c
+                            *COM*:00000001 __gnu_lto_slim
+
+NO UNDEFINED SYMBOLS

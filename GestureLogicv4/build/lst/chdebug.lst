@@ -1,0 +1,340 @@
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccCLSwjn.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.arch armv7e-m
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"chdebug.c"
+  14              		.section	.gnu.debuglto_.debug_info,"e",%progbits
+  15              	.Ldebug_info0:
+  16              		.hidden	chdebug.c.b37bc413
+  17              		.weak	chdebug.c.b37bc413
+  18              	chdebug.c.b37bc413:
+  19 0000 75000000 		.4byte	0x75
+  20 0004 0400     		.2byte	0x4
+  21 0006 00000000 		.4byte	.Ldebug_abbrev0
+  22 000a 04       		.byte	0x4
+  23 000b 01       		.uleb128 0x1
+  24 000c 44000000 		.4byte	.LASF12
+  25 0010 0C       		.byte	0xc
+  26 0011 1C010000 		.4byte	.LASF13
+  27 0015 7C010000 		.4byte	.LASF14
+  28 0019 00000000 		.4byte	.Ldebug_line0
+  29 001d 02       		.uleb128 0x2
+  30 001e 04       		.byte	0x4
+  31 001f 05       		.byte	0x5
+  32 0020 696E7400 		.ascii	"int\000"
+  33 0024 03       		.uleb128 0x3
+  34 0025 04       		.byte	0x4
+  35 0026 07       		.byte	0x7
+  36 0027 0E000000 		.4byte	.LASF0
+  37 002b 03       		.uleb128 0x3
+  38 002c 08       		.byte	0x8
+  39 002d 05       		.byte	0x5
+  40 002e 00000000 		.4byte	.LASF1
+  41 0032 03       		.uleb128 0x3
+  42 0033 08       		.byte	0x8
+  43 0034 04       		.byte	0x4
+  44 0035 70010000 		.4byte	.LASF2
+  45 0039 03       		.uleb128 0x3
+  46 003a 01       		.byte	0x1
+  47 003b 06       		.byte	0x6
+  48 003c 64010000 		.4byte	.LASF3
+  49 0040 03       		.uleb128 0x3
+  50 0041 01       		.byte	0x1
+  51 0042 08       		.byte	0x8
+  52 0043 09010000 		.4byte	.LASF4
+  53 0047 03       		.uleb128 0x3
+  54 0048 02       		.byte	0x2
+  55 0049 05       		.byte	0x5
+  56 004a A9010000 		.4byte	.LASF5
+  57 004e 03       		.uleb128 0x3
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccCLSwjn.s 			page 2
+
+
+  58 004f 02       		.byte	0x2
+  59 0050 07       		.byte	0x7
+  60 0051 51010000 		.4byte	.LASF6
+  61 0055 03       		.uleb128 0x3
+  62 0056 04       		.byte	0x4
+  63 0057 05       		.byte	0x5
+  64 0058 42010000 		.4byte	.LASF7
+  65 005c 03       		.uleb128 0x3
+  66 005d 04       		.byte	0x4
+  67 005e 07       		.byte	0x7
+  68 005f 1B000000 		.4byte	.LASF8
+  69 0063 03       		.uleb128 0x3
+  70 0064 08       		.byte	0x8
+  71 0065 07       		.byte	0x7
+  72 0066 2D000000 		.4byte	.LASF9
+  73 006a 03       		.uleb128 0x3
+  74 006b 01       		.byte	0x1
+  75 006c 08       		.byte	0x8
+  76 006d 17010000 		.4byte	.LASF10
+  77 0071 03       		.uleb128 0x3
+  78 0072 01       		.byte	0x1
+  79 0073 02       		.byte	0x2
+  80 0074 4B010000 		.4byte	.LASF11
+  81 0078 00       		.byte	0
+  82              		.section	.gnu.debuglto_.debug_abbrev,"e",%progbits
+  83              	.Ldebug_abbrev0:
+  84 0000 01       		.uleb128 0x1
+  85 0001 11       		.uleb128 0x11
+  86 0002 01       		.byte	0x1
+  87 0003 25       		.uleb128 0x25
+  88 0004 0E       		.uleb128 0xe
+  89 0005 13       		.uleb128 0x13
+  90 0006 0B       		.uleb128 0xb
+  91 0007 03       		.uleb128 0x3
+  92 0008 0E       		.uleb128 0xe
+  93 0009 1B       		.uleb128 0x1b
+  94 000a 0E       		.uleb128 0xe
+  95 000b 10       		.uleb128 0x10
+  96 000c 17       		.uleb128 0x17
+  97 000d 00       		.byte	0
+  98 000e 00       		.byte	0
+  99 000f 02       		.uleb128 0x2
+ 100 0010 24       		.uleb128 0x24
+ 101 0011 00       		.byte	0
+ 102 0012 0B       		.uleb128 0xb
+ 103 0013 0B       		.uleb128 0xb
+ 104 0014 3E       		.uleb128 0x3e
+ 105 0015 0B       		.uleb128 0xb
+ 106 0016 03       		.uleb128 0x3
+ 107 0017 08       		.uleb128 0x8
+ 108 0018 00       		.byte	0
+ 109 0019 00       		.byte	0
+ 110 001a 03       		.uleb128 0x3
+ 111 001b 24       		.uleb128 0x24
+ 112 001c 00       		.byte	0
+ 113 001d 0B       		.uleb128 0xb
+ 114 001e 0B       		.uleb128 0xb
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccCLSwjn.s 			page 3
+
+
+ 115 001f 3E       		.uleb128 0x3e
+ 116 0020 0B       		.uleb128 0xb
+ 117 0021 03       		.uleb128 0x3
+ 118 0022 0E       		.uleb128 0xe
+ 119 0023 00       		.byte	0
+ 120 0024 00       		.byte	0
+ 121 0025 00       		.byte	0
+ 122              		.section	.gnu.debuglto_.debug_line,"e",%progbits
+ 123              	.Ldebug_line0:
+ 124 0000 1A000000 		.4byte	.LELT0-.LSLT0
+ 125              	.LSLT0:
+ 126 0004 0400     		.2byte	0x4
+ 127 0006 14000000 		.4byte	.LELTP0-.LASLTP0
+ 128              	.LASLTP0:
+ 129 000a 01       		.byte	0x1
+ 130 000b 01       		.byte	0x1
+ 131 000c 01       		.byte	0x1
+ 132 000d F6       		.byte	0xf6
+ 133 000e F2       		.byte	0xf2
+ 134 000f 0D       		.byte	0xd
+ 135 0010 00       		.byte	0
+ 136 0011 01       		.byte	0x1
+ 137 0012 01       		.byte	0x1
+ 138 0013 01       		.byte	0x1
+ 139 0014 01       		.byte	0x1
+ 140 0015 00       		.byte	0
+ 141 0016 00       		.byte	0
+ 142 0017 00       		.byte	0
+ 143 0018 01       		.byte	0x1
+ 144 0019 00       		.byte	0
+ 145 001a 00       		.byte	0
+ 146 001b 01       		.byte	0x1
+ 147 001c 00       		.byte	0
+ 148 001d 00       		.byte	0
+ 149              	.LELTP0:
+ 150              	.LELT0:
+ 151              		.section	.gnu.debuglto_.debug_str,"eMS",%progbits,1
+ 152              	.LASF1:
+ 153 0000 6C6F6E67 		.ascii	"long long int\000"
+ 153      206C6F6E 
+ 153      6720696E 
+ 153      7400
+ 154              	.LASF0:
+ 155 000e 756E7369 		.ascii	"unsigned int\000"
+ 155      676E6564 
+ 155      20696E74 
+ 155      00
+ 156              	.LASF8:
+ 157 001b 6C6F6E67 		.ascii	"long unsigned int\000"
+ 157      20756E73 
+ 157      69676E65 
+ 157      6420696E 
+ 157      7400
+ 158              	.LASF9:
+ 159 002d 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 159      206C6F6E 
+ 159      6720756E 
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccCLSwjn.s 			page 4
+
+
+ 159      7369676E 
+ 159      65642069 
+ 160              	.LASF12:
+ 161 0044 474E5520 		.ascii	"GNU C17 10.3.1 20210824 (release) -mcpu=cortex-m4 -"
+ 161      43313720 
+ 161      31302E33 
+ 161      2E312032 
+ 161      30323130 
+ 162 0077 6D746875 		.ascii	"mthumb -mfloat-abi=soft -march=armv7e-m -ggdb -O0 -"
+ 162      6D62202D 
+ 162      6D666C6F 
+ 162      61742D61 
+ 162      62693D73 
+ 163 00aa 666F6D69 		.ascii	"fomit-frame-pointer -falign-functions=16 -ffunction"
+ 163      742D6672 
+ 163      616D652D 
+ 163      706F696E 
+ 163      74657220 
+ 164 00dd 2D736563 		.ascii	"-sections -fdata-sections -fno-common -flto\000"
+ 164      74696F6E 
+ 164      73202D66 
+ 164      64617461 
+ 164      2D736563 
+ 165              	.LASF4:
+ 166 0109 756E7369 		.ascii	"unsigned char\000"
+ 166      676E6564 
+ 166      20636861 
+ 166      7200
+ 167              	.LASF10:
+ 168 0117 63686172 		.ascii	"char\000"
+ 168      00
+ 169              	.LASF13:
+ 170 011c 2E2E2F2E 		.ascii	"../../chibios2111/os/rt/src/chdebug.c\000"
+ 170      2E2F6368 
+ 170      6962696F 
+ 170      73323131 
+ 170      312F6F73 
+ 171              	.LASF7:
+ 172 0142 6C6F6E67 		.ascii	"long int\000"
+ 172      20696E74 
+ 172      00
+ 173              	.LASF11:
+ 174 014b 5F426F6F 		.ascii	"_Bool\000"
+ 174      6C00
+ 175              	.LASF6:
+ 176 0151 73686F72 		.ascii	"short unsigned int\000"
+ 176      7420756E 
+ 176      7369676E 
+ 176      65642069 
+ 176      6E7400
+ 177              	.LASF3:
+ 178 0164 7369676E 		.ascii	"signed char\000"
+ 178      65642063 
+ 178      68617200 
+ 179              	.LASF2:
+ 180 0170 6C6F6E67 		.ascii	"long double\000"
+ 180      20646F75 
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccCLSwjn.s 			page 5
+
+
+ 180      626C6500 
+ 181              	.LASF14:
+ 182 017c 433A5C43 		.ascii	"C:\\ChibiStudio\\workspace_user\\GestureLogicv4\000"
+ 182      68696269 
+ 182      53747564 
+ 182      696F5C77 
+ 182      6F726B73 
+ 183              	.LASF5:
+ 184 01a9 73686F72 		.ascii	"short int\000"
+ 184      7420696E 
+ 184      7400
+ 185              		.text
+ 186              		.section	.gnu.lto_.inline.71a45ee3,"e",%progbits
+ 187 0000 789C6362 		.ascii	"x\234cb@\006\000\000*\000\003"
+ 187      40060000 
+ 187      2A0003
+ 188              		.text
+ 189              		.section	.gnu.lto_.jmpfuncs.71a45ee3,"e",%progbits
+ 190 0000 789C6362 		.ascii	"x\234cb@\006\000\000*\000\003"
+ 190      40060000 
+ 190      2A0003
+ 191              		.text
+ 192              		.section	.gnu.lto_.lto.71a45ee3,"e",%progbits
+ 193 0000 09000400 		.ascii	"\011\000\004\000\001\000\000\000"
+ 193      01000000 
+ 194              		.text
+ 195              		.section	.gnu.lto_.symbol_nodes.71a45ee3,"e",%progbits
+ 196 0000 789C6362 		.ascii	"x\234cb\000\001\000\000\022\000\003"
+ 196      00010000 
+ 196      120003
+ 197              		.text
+ 198              		.section	.gnu.lto_.refs.71a45ee3,"e",%progbits
+ 199 0000 789C6364 		.ascii	"x\234cd\000\002\000\000\012\000\002"
+ 199      00020000 
+ 199      0A0002
+ 200              		.text
+ 201              		.section	.gnu.lto_.decls.71a45ee3,"e",%progbits
+ 202 0000 789C6360 		.ascii	"x\234c````\004b\025 \376\017\004 \366E\006\002\000\000"
+ 202      60606004 
+ 202      621520FE 
+ 202      0F0420F6 
+ 202      45060200 
+ 203 0015 BF3204F4 		.ascii	"\2772\004\364"
+ 204              		.text
+ 205              		.section	.gnu.lto_.symtab.71a45ee3,"e",%progbits
+ 206              		.text
+ 207              		.section	.gnu.lto_.ext_symtab.71a45ee3,"e",%progbits
+ 208 0000 01       		.ascii	"\001"
+ 209              		.text
+ 210              		.section	.gnu.lto_.opts,"e",%progbits
+ 211 0000 272D666E 		.ascii	"'-fno-openmp' '-fno-openacc' '-fno-pie' '-fcf-prote"
+ 211      6F2D6F70 
+ 211      656E6D70 
+ 211      2720272D 
+ 211      666E6F2D 
+ 212 0033 6374696F 		.ascii	"ction=none' '-g' '-mcpu=cortex-m4' '-mthumb' '-mflo"
+ 212      6E3D6E6F 
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccCLSwjn.s 			page 6
+
+
+ 212      6E652720 
+ 212      272D6727 
+ 212      20272D6D 
+ 213 0066 61742D61 		.ascii	"at-abi=soft' '-mlibarch=armv7e-m' '-march=armv7e-m'"
+ 213      62693D73 
+ 213      6F667427 
+ 213      20272D6D 
+ 213      6C696261 
+ 214 0099 20272D4F 		.ascii	" '-O0' '-fomit-frame-pointer' '-falign-functions=16"
+ 214      30272027 
+ 214      2D666F6D 
+ 214      69742D66 
+ 214      72616D65 
+ 215 00cc 2720272D 		.ascii	"' '-ffunction-sections' '-fdata-sections' '-fno-com"
+ 215      6666756E 
+ 215      6374696F 
+ 215      6E2D7365 
+ 215      6374696F 
+ 216 00ff 6D6F6E27 		.ascii	"mon' '-flto' '-Xassembler' '-alms=./build/lst/chdeb"
+ 216      20272D66 
+ 216      6C746F27 
+ 216      20272D58 
+ 216      61737365 
+ 217 0132 75672E6C 		.ascii	"ug.lst'\000"
+ 217      73742700 
+ 218              		.text
+ 219              		.comm	__gnu_lto_slim,1,1
+ 220              		.ident	"GCC: (GNU Arm Embedded Toolchain 10.3-2021.10) 10.3.1 20210824 (release)"
+ARM GAS  C:\Users\nello\AppData\Local\Temp\ccCLSwjn.s 			page 7
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 chdebug.c
+C:\Users\nello\AppData\Local\Temp\ccCLSwjn.s:18     .gnu.debuglto_.debug_info:00000000 chdebug.c.b37bc413
+                            *COM*:00000001 __gnu_lto_slim
+
+NO UNDEFINED SYMBOLS
