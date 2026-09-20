@@ -30,23 +30,6 @@ condiviso fra client e scheda gesture. Due sketch separati gestiscono il
 bridge TCP ESP8266 e la dashboard su un secondo ESP8266. Il broker MQTT è
 un servizio esterno.
 
-## Contenuto dell'archivio
-
-I sorgenti, le configurazioni e i Makefile provengono dalla versione finale
-fornita. Questa è una riorganizzazione documentale: i Makefile conservano i
-percorsi originali e non sono stati adattati alla nuova disposizione.
-Non sono state eseguite compilazioni del firmware né prove sulle schede.
-
-Sono conservati anche i driver ST VL53L7CX, i plugin, il buffer firmware
-necessario al sensore e gli avvisi di copyright/licenza presenti nei file.
-Sono esclusi risultati di compilazione, `.dep/`, backup `.bak`, `.DS_Store`,
-metadati Eclipse, launch/debug e script con percorsi locali. Sono omessi i
-vecchi sorgenti client `Communication/main.c`, `sos_client`, `sos_outbox` e
-`sos_request`, già esclusi dal Makefile finale fornito.
-
-La vecchia cartella `RT-STM32G474RE-BPM-MQ2_complete` è sostituita dalla
-versione finale e resta disponibile nella cronologia Git.
-
 ## Credenziali di esempio
 
 SSID e password Wi-Fi sono sostituiti da un facsimile nei file
