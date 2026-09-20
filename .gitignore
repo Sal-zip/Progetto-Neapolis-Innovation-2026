@@ -1,0 +1,11 @@
+# File generati e copie locali
+**/build/
+**/.dep/
+**/__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+*.bak
+*.swp
+*.swo
+*~
