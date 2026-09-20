@@ -27,10 +27,6 @@ Gilet ──radio──▶ Bridge ──MQTT──▶ Mosquitto ──▶ Flask 
 6. [Configurazione](#6-configurazione)
 7. [Mappe offline](#7-mappe-offline)
 8. [Affidabilità e sicurezza](#8-affidabilità-e-sicurezza)
-9. [Stile grafico](#9-stile-grafico)
-10. [Scelte progettuali](#10-scelte-progettuali)
-11. [Limiti noti e sviluppi futuri](#11-limiti-noti-e-sviluppi-futuri)
-
 ---
 
 ## 1. Cosa fa, pagina per pagina
