@@ -1,12 +1,11 @@
-# Progetto Neapolis Innovation 2026
+# Rescue Vest — sviluppo
 
-Il progetto finale è in **[Rescue Vest - Prototipo](Rescue%20Vest%20-%20Prototipo/README.md)**.
+La struttura di sviluppo è in
+[Rescue Vest - Develop](Rescue%20Vest%20-%20Develop/README.md).
 
-- [Client e server](Rescue%20Vest%20-%20Prototipo/comunication/README.md)
-- [PPG e MQ2](Rescue%20Vest%20-%20Prototipo/rilevazione%20parametri%20vitali/README.md)
-- [GPS](Rescue%20Vest%20-%20Prototipo/GPS/README.md)
-- [Gesture](Rescue%20Vest%20-%20Prototipo/gesture/README.md)
+Il codice GPS precedente e la dashboard desktop sono in
+[GPS/gps-old](Rescue%20Vest%20-%20Develop/GPS/gps-old/).
+Le altre cartelle sono predisposte per lo sviluppo futuro.
 
-Ogni cartella contiene un README con descrizione, pinout e alternate function.
-I file sono organizzati per modulo; i Makefile mantengono i percorsi originali.
-Le versioni precedenti restano nella cronologia Git.
+La versione finale è nel branch `main`; il branch `gps` conserva la sua
+versione originale.
